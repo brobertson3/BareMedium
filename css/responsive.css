@@ -1,0 +1,14 @@
+@media screen and (max-width: 480px) {
+  h2 {
+    font-size: 2em;
+  }
+
+  div.introduction {
+    font-size: 1em;
+    max-width: 100%;
+  }
+
+  body {
+    background-size: 100px 100px;
+  }
+}
