@@ -1,0 +1,273 @@
+/*********************** All the sections ***********************/
+body {
+	font-family: 'Life Savers', sans-serif;
+	text-align: center;
+	min-width: 300px;
+}
+
+body p, ol li {
+	font-size: 1.2rem;
+}
+
+h1, h2 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-family: 'Permanent Marker', sans-serif;
+	text-align: center;
+}
+
+h2 {
+	font-size: 3rem;
+}
+
+.padding_top {
+	padding-top: 50px;
+}
+
+a {
+	cursor: pointer;
+}
+
+/********************** Navigation section **********************/
+.navbar {
+	margin-bottom: 0;
+	font-size: 2rem;
+}
+
+/************************* Home section *************************/
+.home_container {
+	height: 600px;
+	position: relative;
+	z-index: 1;
+	display: flex;
+	justify-content: center; /* Vertical align because columns*/
+	flex-direction: column;
+	font-size: 2rem;
+}
+
+.home_container h1 {
+	font-size: 5rem;
+}
+
+.bg_home {
+	background: url('http://thumb9.shutterstock.com/display_pic_with_logo/253597/236404216/stock-photo-programming-code-abstract-screen-of-software-developer-computer-script-blue-background-color-236404216.jpg') center center no-repeat fixed;
+	background-size: cover;
+	opacity: 0.3;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+}
+
+/********************** About Me section **********************/
+.about_me_container {
+	
+}
+
+.about_me_container h2:first-child {
+	margin-top: 20px;
+	margin-bottom: 0;
+	padding-right: 7rem;
+}
+
+.about_me_container h2:nth-child(2n) {
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+.main_image_container {
+	width: 100%;
+}
+
+.main_image_div {
+	display: inline-block;
+	position: relative;
+	border: 1px solid black;
+	height: 200px;
+	width: 200px;
+	border-radius: 200px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+
+.main_image {
+	height: 200px;
+	width: 200px;
+	border-radius: 200px;
+}
+
+.blurred_image {
+	filter: blur(20px);
+	/* Browser Specific */
+	-webkit-filter: blur(20px);
+	-moz-filter: blur(20px);
+	-o-filter: blur(20px);
+	-ms-filter: blur(20px);
+}
+
+.real_me {
+	display: inline-block;
+	position: absolute;
+	font-family: 'Permanent Marker';
+}
+
+.real_me p {
+	font-size: 3rem;
+}
+
+.strike_through {
+	text-decoration: line-through;
+	color: red;
+}
+
+.strike_through_text {
+	color: #000;
+}
+
+.hobbies_list {
+	list-style-position: inside;
+	padding-left: 0;
+}
+
+/************************* Blog section *************************/
+
+/************************ Skills section ************************/
+
+.skill_shell {
+	width: 33.333%;
+	display: inline;
+	float: left;
+}
+
+.skill {
+	border-radius: 50%;
+	border: 2px solid blue;
+	height: 75px;
+	width: 75px;
+	margin: 0 auto;
+}
+
+.skill_shell:nth-child(2n) .skill{
+	border-color: red;
+}
+
+.skill_banner {
+	line-height: 75px;
+}
+
+/* The animation code */
+/*@keyframes rolling_html_circle {
+    to {
+    	transform: translateX(200px);
+    	-webkit-transform: translateX(200px);
+    }
+}
+
+@keyframes rolling_html_banner {
+    from {
+    	margin-left: 100%;
+    	margin-right: 0%;
+        margin: 0 auto;
+        display: inline-block;
+        text-align: center;
+    	transform: rotate(0deg);
+    }
+    to {
+    	margin-right: 100%;
+    	margin-left: 0%;
+        margin: 0 auto;
+        display: inline-block;
+        text-align: center;
+    	transform: rotate(360deg);
+    }
+}
+
+.biggest_skills_container {
+}
+
+.biggest_skills_container h2 {
+}
+
+.skill_spacing {
+	text-align: center;
+}
+
+.skill_container {
+	position: relative;
+	height: 200px;
+	width: 200px;
+	border-radius: 200px;
+	border: 2px solid black;
+	margin-top: 50px;
+}
+
+.html_container {
+	position: absolute;
+	height: 200px;
+	width: 200px;
+	left: -200px;
+	background-color: #2C8BDE;
+	border-radius: 200px;
+    animation-name: rolling_html_circle;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    margin: 0 auto;
+}
+
+.html_banner:before {
+    content: "Congratulations";
+    font-size: 2.5rem;
+}
+
+.html_banner {
+	margin: 0 auto;
+    display: block;
+    text-align: center;
+	line-height: 200px;
+	animation-name: rolling_html_banner;
+	animation-duration: 5s;
+}*/
+/************************* Work section *************************/
+
+
+
+/********************** Contact Me section **********************/
+
+.contact_me_container {
+	padding-bottom: 30px;
+}
+
+.contact_me_container > p {
+	margin-bottom: 30px;
+}
+
+.contact_links {
+	margin: 0 auto;
+}
+
+.contact_links i {
+	border-radius: 50%;
+	border: solid #000 1px;
+	padding: 5px;
+}
+
+.contact_links ul{
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.contact_links li {
+	display: inline-block;
+	margin: 0 1%;
+}
+
+.contact_links {
+	padding-top: 30px;
+}
+
+.contact_links a {
+	text-decoration: none;
+}
+

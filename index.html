@@ -9,7 +9,8 @@
         <!-- Stylesheet links -->
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="fa/font-awesome.min.css">
+        <link rel="stylesheet" href="css/index.css">
         <link rel="stylesheet" href="css/responsive.css">
         <link href='https://fonts.googleapis.com/css?family=Permanent+Marker|Life+Savers|Finger+Paint|Glegoo|Roboto:300' rel='stylesheet' type='text/css'>
 
@@ -21,16 +22,144 @@
     <body>
         <!-- Main header for the site - where the logo goes -->
         <header class="main_header">
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!-- This will become an image once the logo is completed -->
+                        <a class="navbar-brand" href="#">BareMedium</a>
+                    </div>
 
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse my_nav">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="#home">Home <span class="sr-only">(current)</span></a></li>
+                            <li><a href="#about_me">About</a></li>
+                            <li><a href="http://www.tumblr.com/blog/baregeek" target="_blank">Blog</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#">Work</a></li>
+                            <li><a href="#contact_me">Contact</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
         </header>
 
-        <img id="main_pic" src="img/main_pic.jpg" alt="" align="middle">
+        <!-- <img id="main_pic" src="img/main_pic.jpg" alt="" align="middle"> -->
         
-        <div class="introduction">
-          
+        <div class="container-fluid home_container" id="home">
+            <h1>I'm Brent Robertson</h1>
+            <p>a Front End Web Developer from Baltimore, Maryland</p>
+            <p>&#43 Freelance for hire.<p>
+            <!-- To set opacity to only the background image -->
+            <div class="bg_home">
+            </div>
         </div>
 
-        <script src="js/main.js"></script>
+        <div class="container-fluid about_me_container" id="about_me">
+            <h2>Bare</h2>
+            <h2>
+                <span class="strike_through">
+                    <span class="strike_through_text">About</span>
+                </span> Me
+                
+            </h2>
+            <div class="main_image_container">
+                <div class="main_image_div">
+                    <img class="main_image blurred_image" src="img/main_pic.jpg" alt="">
+                </div>
+                <div class="real_me hidden">
+                    <p>The Real Me<p>
+                </div>
+            </div>
+            <p>Hmmm…where to start? I’m a 27 year old dreamer and have lived in Baltimore, Maryland practically my whole life.  I’ve always had ambitions to create, probably because I have two insanely talented, creative, and artistic parents.  You can check out some of my mom’s work here (www.loveandlike.com?) and my dad’s work here (www.wormholesquare.com).  That passion led me to Front End Web Development, since it bridges the gap between my creative and technical skills.  What technical skills you ask…Oh…I forgot to mention that I’ve been a full-time Software Engineer for the past four years.</p>
+            <p>I recently completed the Front End Web Development course at General Assembly in May 2016.  That was my springboard into this field and now I intend to use those skills to freelance.  My skills are constantly growing so you’re in good hands. My work, though not abundant at this point, speaks for itself, which creeped me out at first, but now I like what it has to say and I’m sure you will to. -psst- I made this site as well.</p>
+            <p>When I’m not coding I thoroughly enjoy:</p>
+            <ol class="hobbies_list">
+                <li>watching anime (Luffy is my spirit animal)</li>
+                <li>playing video games (still Xbox 360)</li>
+                <li>any kind of brainteaser (2 + 2 = Golf)</li>
+                <li>drawing (I’m starting to do comics)</li>
+                <li>Lists comprised of five facts (get to know me more by contacting me.)</li>
+            </ol>
+        </div>
+
+        <div class="container-fluid skills_container" id="skills">
+            <!-- 1. Going to use bootstrap grid to divide then center each circle 
+                 2. -->
+            <h2>Skills</h2>
+            <div class="row inner_skills_container col-xs-12 col-md-offset-2 col-md-8">
+                <div class="skill_shell">
+                    <div class="skill">
+                      <span class="skill_banner">HTML5</span>
+                    </div>
+                </div>
+                <div class="skill_shell">
+                    <div class="skill">
+                      <span class="skill_banner">CSS3</span>
+                    </div>
+                </div>
+                <div class="skill_shell">
+                    <div class="skill">
+                      <span class="skill_banner">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid contact_me_container" id="contact_me">
+            <h2>Contact Me</h2>
+            <p>Drop me a note below if you would like me to work on a project...or just to chat!</p>
+            <div class="row">
+                <!-- Small screen I want each to take up entire width.
+                Medium and up it can go side by side. -->
+                <div class="col-xs-12 col-md-offset-1 col-md-6 contact_form">
+                    <form>
+                        <div class="form-group">
+                            <label for="inputName">Name:</label>
+                            <input type="text" class="form-control" id="inputName" placeholder="Full Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail">Email:</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputMessage">Message:</label>
+                            <textarea rows="10" class="form-control" id="inputMessage" placeholder="Speak to me..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <!-- Offset one for medium to provide spacing between form and links -->
+                <div class="col-xs-12 col-md-5 contact_links">
+                    <ul>
+                        <a>
+                            <li><i class="fa fa-fw fa-facebook fa-2x"></i></li>
+                        </a>
+                        <a>
+                            <li><i class="fa fa-fw fa-linkedin fa-2x"></i></li>
+                        </a>
+                        <a>
+                            <li><i class="fa fa-fw fa-twitter fa-2x"></i></li>
+                        </a>
+                        <a>
+                            <li><i class="fa fa-fw fa-tumblr fa-2x"></i></li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2016 Brent Robertson - www.BareMedium.co</p>
+        </footer>
+
+        <script src="js/index.js"></script>
        
         </script>
     </body>
