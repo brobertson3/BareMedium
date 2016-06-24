@@ -16,4 +16,9 @@ $(document).ready(function () {
 		$(this).parent().addClass('active');
 		$(this).append('<span class="sr-only">(current)</span>');
 	});
+
+	/* TODO
+		1. On hover give the thumbnail a red/blue overlay.
+		2. Show the skills used in it in a circle around the picture 
+		with either a red/blue border.*/
 });

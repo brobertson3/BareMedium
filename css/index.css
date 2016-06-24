@@ -157,6 +157,11 @@ a {
 	line-height: 75px;
 }
 
+.inner_skills_container {
+	margin-right: 0;
+	margin-left: 0;
+}
+
 /* The animation code */
 /*@keyframes rolling_html_circle {
     to {
@@ -231,7 +236,26 @@ a {
 }*/
 /************************* Work section *************************/
 
+.portfolio_images {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
 
+.thumbnails {
+	width: 100px;
+	height: 100px;
+	border: 1px solid #000;
+	border-radius: 50px 5px 50px 5px;
+	margin: 5px auto;
+}
+
+.thumbnails:hover {
+	background: linear-gradient(
+		rgba(255, 0, 0, 0.45), 
+      	rgba(255, 0, 0, 0.45), url("../img/ReThree_screen.png"));
+
+}
 
 /********************** Contact Me section **********************/
 
