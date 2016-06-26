@@ -28,10 +28,26 @@ a {
 	cursor: pointer;
 }
 
+.home_container, .about_me_container, .skills_container, .portfolio_container, .contact_me_container {
+	border-top: solid 3px #000;
+}
+
 /********************** Navigation section **********************/
 .navbar {
 	margin-bottom: 0;
 	font-size: 2rem;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+	background-color: red;
+}
+
+.navbar-inverse .navbar-nav > li:nth-child(2n).active > a, .navbar-inverse .navbar-nav > li:nth-child(2n).active > a:focus, .navbar-inverse .navbar-nav > li:nth-child(2n).active > a:hover {
+	background-color: blue;
+}
+
+.navbar-fixed-top {
+	border-width: 0;
 }
 
 /************************* Home section *************************/
@@ -63,7 +79,7 @@ a {
 
 /********************** About Me section **********************/
 .about_me_container {
-	
+	margin-bottom: 20px;
 }
 
 .about_me_container h2:first-child {
@@ -85,16 +101,16 @@ a {
 	display: inline-block;
 	position: relative;
 	border: 1px solid black;
-	height: 200px;
-	width: 200px;
-	border-radius: 200px;
+	height: 125px;
+	width: 125px;
+	border-radius: 50%;
 	margin: 0 auto;
 	margin-bottom: 30px;
 }
 
 .main_image {
-	height: 200px;
-	width: 200px;
+	height: 100%;
+	width: 100%;
 	border-radius: 200px;
 }
 
@@ -114,7 +130,7 @@ a {
 }
 
 .real_me p {
-	font-size: 3rem;
+	font-size: 2rem;
 }
 
 .strike_through {
@@ -134,6 +150,11 @@ a {
 /************************* Blog section *************************/
 
 /************************ Skills section ************************/
+
+/*.skills_container {
+	color: #fff;
+	background-color: #222;
+}*/
 
 .skill_shell {
 	width: 33.333%;
@@ -158,6 +179,7 @@ a {
 }
 
 .inner_skills_container {
+	margin: 0 0 20px 0;
 	margin-right: 0;
 	margin-left: 0;
 }
@@ -234,23 +256,24 @@ a {
 	animation-name: rolling_html_banner;
 	animation-duration: 5s;
 }*/
+
 /************************* Work section *************************/
 
-.portfolio_images {
+.portfolio_thumbnails_container {
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 	flex-wrap: wrap;
 }
 
-.thumbnails {
+.thumbnail {
 	width: 100px;
 	height: 100px;
 	border: 1px solid #000;
 	border-radius: 50px 5px 50px 5px;
-	margin: 5px auto;
+	margin: 10px 20px;
 }
 
-.thumbnails:hover {
+.thumbnail:hover {
 	background: linear-gradient(
 		rgba(255, 0, 0, 0.45), 
       	rgba(255, 0, 0, 0.45), url("../img/ReThree_screen.png"));
@@ -295,3 +318,15 @@ a {
 	text-decoration: none;
 }
 
+/********************** Footer section **********************/
+
+footer {
+	font-size: 1rem;
+	background-color: #222;
+	color: #fff;
+	padding: 10px 0;
+}
+
+footer p {
+	margin-bottom: 0;
+}

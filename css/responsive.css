@@ -2,7 +2,23 @@
   
 }
 
+@media screen and (min-width: 590px) {
+	.thumbnail {
+		margin: 15px 43px;
+	}
+}
+
 @media screen and (min-width: 768px) {
+	body p, ol li {
+		font-size: 1.5rem;
+	}
+
+	.thumbnail {
+		width: 150px;
+		height: 150px;
+		margin: 15px 48px;
+	}
+
 	.skill {
 		width: 150px;
 		height: 150px;
@@ -10,5 +26,17 @@
 
 	.skill_banner {
 		line-height: 150px;
+	}
+
+	footer {
+		font-size: 1.2rem;
+	}
+}
+
+@media screen and (min-width: 990px) {
+	.thumbnail {
+		width: 175px;
+		height: 175px;
+		margin: 20px 50px;
 	}
 }
