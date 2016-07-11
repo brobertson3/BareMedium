@@ -20,13 +20,22 @@
     </head>
 
     <body>
+<!-- ___   ___ ___ ________              ___      ___ 
+    |   | |   |   |        \            |   \    /   |
+    |   | |   |___|   |\    | _______   |    \  /    |_______
+    |    -    |___|   |/    |/       \  |     \/     |       |
+    |         |   |         /   ___   \ |   |\  /|   |   --  |
+    |   |-|   |   |   |\   \          / |   | \/ |   |   ____|
+    |   | |   |   |   | \   \  ______/  |   |    |   |  |____
+    |___| |___|___|___|  \___\_______|  |___|    |___|_______|
+-->
         <!-- Main header for the site - where the logo goes -->
         <header class="main_header">
             <nav class="navbar navbar-inverse navbar-fixed-top">
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav_main" aria-expanded="false">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -37,7 +46,7 @@
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse my_nav">
+                    <div class="collapse navbar-collapse my_nav" id="nav_main">
                         <ul class="nav navbar-nav navbar-right">
                             <li class="active"><a href="#home">Home <span class="sr-only">(current)</span></a></li>
                             <li><a href="#about_me">About</a></li>
@@ -75,8 +84,8 @@
                     <p>The Real Me<p>
                 </div>
             </div>
-            <p>Hmmm…where to start? I’m a 27 year old dreamer and have lived in Baltimore, Maryland practically my whole life.  I’ve always had ambitions to create, probably because I have two insanely talented, creative, and artistic parents.  You can check out some of my mom’s work here (www.loveandlike.com?) and my dad’s work here (www.wormholesquare.com).  That passion led me to Front End Web Development, since it bridges the gap between my creative and technical skills.  What technical skills you ask…Oh…I forgot to mention that I’ve been a full-time Software Engineer for the past four years.</p>
-            <p>I recently completed the Front End Web Development course at General Assembly in May 2016.  That was my springboard into this field and now I intend to use those skills to freelance.  My skills are constantly growing so you’re in good hands. My work, though not abundant at this point, speaks for itself, which creeped me out at first, but now I like what it has to say and I’m sure you will to. -psst- I made this site as well.</p>
+            <p class="intro">Hmmm…where to start? I’m a 27 year old dreamer and have lived in Baltimore, Maryland practically my whole life.  I’ve always had ambitions to create, probably because I have two insanely talented, creative, and artistic parents.  You can check out some of my mom’s work here (www.loveandlike.com?) and my dad’s work here (www.wormholesquare.com).  That passion led me to Front End Web Development, since it bridges the gap between my creative and technical skills.  What technical skills you ask…Oh…I forgot to mention that I’ve been a full-time Software Engineer for the past four years.</p>
+            <p class="intro">I recently completed the Front End Web Development course at General Assembly in May 2016.  That was my springboard into this field and now I intend to use those skills to freelance.  My skills are constantly growing so you’re in good hands. My work, though not abundant at this point, speaks for itself, which creeped me out at first, but now I like what it has to say and I’m sure you will to. -psst- I made this site as well.</p>
             <p>When I’m not coding I thoroughly enjoy:</p>
             <ol class="hobbies_list">
                 <li>watching anime (Luffy is my spirit animal)</li>
@@ -114,26 +123,61 @@
             <h2>Portfolio</h2>
             <div class="portfolio_thumbnails_container">
                 <!-- TODO: add the read more description after each thumbnail -->
+                <!-- This is the container for the ReThree Project. -->
                 <div class="project_container">
-                    <img class="thumbnail rethree" src="img/ReThree_screen.png" alt="ReThree">
+                    <div class="thumbnail_container rethree_image">
+                        <div class="project_skill hidden">CSS3</div>
+                        <div class="project_skill hidden">HTML5</div>
+                        <div class="project_skill hidden">JavaScript</div>
+                        <div class="project_skill hidden">Flexbox</div>
+                        <div class="project_skill hidden">Bootstrap</div>
+                        <div class="thumbnail"></div>
+                    </div>
+                    <h3>ReThree</h3>
+                    <p>Here's some text for you to read. Here's some text for you to read.Here's some text for you to read.Here's some text for you to read.Here's some text for you to read.Here's some text for you to read.Here's some text for you to read.</p>
+                    <!-- TODO change the color of this on hover. -->
+                    <p id="read_more rethree_modal" data-toggle="modal" data-target="#rethree_modal"><a>Read More</a></p>
+
+                    <!-- ReThree Modal -->
+                    <div id="rethree_modal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Modal Header</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Some text in the modal.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
+                <!-- This is the container for the BareMedium Project. -->
                 <div class="project_container">
-                    <img class="thumbnail rethree" src="img/ReThree_screen.png" alt="ReThree">
+                    <div class="thumbnail_container baremedium_image">
+                        <div class="thumbnail"></div>
+                    </div>
+                    <h3>ReThree</h3>
+                    <p>Here's some text for you to read. Here's some text for you to read.Here's some text for you to read.Here's some text for you to read.Here's some text for you to read.Here's some text for you to read.Here's some text for you to read.</p>
+                    <p id="read_more"><a>Read More</a></p>
                 </div>
+                <!-- This is the container for the Upcoming Chewzer Project. -->
                 <div class="project_container">
-                    <img class="thumbnail rethree" src="img/ReThree_screen.png" alt="ReThree">
-                </div>
-                <div class="project_container">
-                    <img class="thumbnail rethree" src="img/ReThree_screen.png" alt="ReThree">
-                </div>
-                <div class="project_container">
-                    <img class="thumbnail rethree" src="img/ReThree_screen.png" alt="ReThree">
-                </div>
-                <div class="project_container">
-                    <img class="thumbnail rethree" src="img/ReThree_screen.png" alt="ReThree">
-                </div>
-                <div class="project_container">
-                    <img class="thumbnail rethree" src="img/ReThree_screen.png" alt="ReThree">
+                    <div class="thumbnail_container dashed_border coming_soon">
+                        <div class="thumbnail">
+                            <p>Coming Soon!</p>
+                        </div>
+                    </div>
+                    <h3>Chewzer</h3>
+                    <p>Here's some text for you to read. Here's some text for you to read.Here's some text for you to read.Here's some text for you to read.Here's some text for you to read.Here's some text for you to read.Here's some text for you to read.</p>
+                    <p id="read_more"><a>Read More</a></p>
                 </div>
             </div>
         </div>
@@ -144,7 +188,7 @@
             <div class="row">
                 <!-- Small screen I want each to take up entire width.
                 Medium and up it can go side by side. -->
-                <div class="col-xs-12 col-md-offset-1 col-md-6 contact_form">
+                <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 contact_form">
                     <form>
                         <div class="form-group">
                             <label for="inputName">Name:</label>
@@ -162,19 +206,27 @@
                     </form>
                 </div>
                 <!-- Offset one for medium to provide spacing between form and links -->
-                <div class="col-xs-12 col-md-5 contact_links">
+                <div class="col-xs-12 contact_links">
                     <ul>
                         <a>
-                            <li><i class="fa fa-fw fa-facebook fa-2x"></i></li>
+                            <li>
+                                <i class="fa fa-fw fa-facebook fa-2x"></i>
+                            </li>
                         </a>
                         <a>
-                            <li><i class="fa fa-fw fa-linkedin fa-2x"></i></li>
+                            <li>
+                                <i class="fa fa-fw fa-linkedin fa-2x"></i>
+                            </li>
                         </a>
                         <a>
-                            <li><i class="fa fa-fw fa-twitter fa-2x"></i></li>
+                            <li>
+                                <i class="fa fa-fw fa-twitter fa-2x"></i>
+                            </li>
                         </a>
                         <a>
-                            <li><i class="fa fa-fw fa-tumblr fa-2x"></i></li>
+                            <li>
+                                <i class="fa fa-fw fa-tumblr fa-2x"></i>
+                            </li>
                         </a>
                     </ul>
                 </div>
