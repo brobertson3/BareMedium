@@ -30,9 +30,9 @@ a {
 
 /* TODO make a proper image file */
 .home_container, .about_me_container, .skills_container, .portfolio_container, .contact_me_container {
-	-webkit-border-image: url(scribbled_border.svg) 33% round; /* Safari 3.1-5 */
-    -o-border-image: url(scribbled_border.svg) 33% round;
-	border-image: url(scribbled_border.svg) 33%  round;
+	-webkit-border-image: url(../img/scratch_border.svg) 33% round; /* Safari 3.1-5 */
+    -o-border-image: url(../img/scratch_border.svg) 33% round;
+	border-image: url(../img/scratch_border.svg) 33%  round;
 	border-top: solid 30px transparent;
 }
 
@@ -135,7 +135,7 @@ a {
 }
 
 .real_me p {
-	font-size: 2rem;
+	font-size: 1.5rem;
 }
 
 .strike_through {

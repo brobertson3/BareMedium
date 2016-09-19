@@ -48,6 +48,15 @@
 		top: 152px;
 	}*/
 
+    /*** About Me ***/
+	.main_image_div {
+		height: 150px;
+		width: 150px;
+	}
+
+	.real_me p {
+	    font-size: 1.8rem;
+    }
 	/*** Skills ***/
 	.skill {
 		width: 125px;
@@ -108,6 +117,17 @@
 		top: 186px;
 	}
 */
+
+    /*** About Me ***/
+	.main_image_div {
+		height: 200px;
+		width: 200px;
+	}
+
+	.real_me p {
+		font-size: 2.7rem;
+	}
+	
 	/*** Skills ***/
 	.skill {
 		width: 150px;
@@ -144,9 +164,9 @@
 		width: 200px;
 	}
 
-	.real_me p {
-		font-size: 3.5rem;
-	}
+	/*.real_me p {
+		font-size: 2.7rem;
+	}*/
 
 	p.intro {
 		padding: 0 10%;
