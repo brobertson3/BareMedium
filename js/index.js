@@ -46,13 +46,28 @@ $(document).ready(function () {
 
 	/* Change the size and color of the icons on hover. */
 	$('.fa.fa-fw').hover(function () {
-		$(this).removeClass('fa-2x');
-		$(this).addClass('fa-4x');
+		// $(this).removeClass('fa-2x');
+		// $(this).addClass('fa-4x');
 		$(this).css("color", "red");
 	}, function () {
-		$(this).removeClass('fa-4x');
-		$(this).addClass('fa-2x');
+		// $(this).removeClass('fa-4x');
+		// $(this).addClass('fa-2x');
 		$(this).css("color", "inherit");
+	});
+
+	/* On hover, show the pulsing arrows, else hide the arrows */
+	$('.thumbnail_container').hover(function (event) {
+		if ($(this).hasClass("rethree_image")) {
+			$('.thumbnail_title.rethree').siblings().removeClass("hidden");
+		} else if ($(this).hasClass("baremedium_image")) {
+			$('.thumbnail_title.baremedium').siblings().removeClass("hidden");
+		}
+	}, function (event) {
+		if($(this).hasClass("rethree_image")) {
+			$('.thumbnail_title.rethree').siblings().addClass("hidden");
+		} else if ($(this).hasClass("baremedium_image")) {
+			$('.thumbnail_title.baremedium').siblings().addClass("hidden");
+		}
 	});
 
 	/* TODO On click of #read_more we need to pop up a dialog box of some sort

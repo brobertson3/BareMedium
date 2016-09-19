@@ -70,7 +70,8 @@ a {
 }
 
 .bg_home {
-	background: url('http://thumb9.shutterstock.com/display_pic_with_logo/253597/236404216/stock-photo-programming-code-abstract-screen-of-software-developer-computer-script-blue-background-color-236404216.jpg') center center no-repeat fixed;
+	/*background: url('http://thumb9.shutterstock.com/display_pic_with_logo/253597/236404216/stock-photo-programming-code-abstract-screen-of-software-developer-computer-script-blue-background-color-236404216.jpg') center center no-repeat fixed; */
+	background: url('../img/screenshot_code.png') center center no-repeat fixed;
 	background-size: cover;
 	opacity: 0.3;
 	position: absolute;
@@ -263,6 +264,10 @@ a {
 
 /************************* Portfolio section *************************/
 
+h4.modal-title {
+	font-family: 'Permanent Marker', sans-serif;
+}
+
 .portfolio_thumbnails_container {
 	display: flex;
 	justify-content: center;
@@ -289,6 +294,10 @@ a {
 	color: red;
 }
 
+.thumbnail_title a{
+	color: #000;
+}
+
 #read_more {
 	text-align: center;
 }
@@ -301,6 +310,11 @@ a {
 	/*margin: 10px 20px;*/
 	background-size: 300px 300px;
 	position: relative;
+}
+
+.thumbnail_title {
+	display: inline-block;
+	padding: 0 20px;
 }
 
 .rethree_image {
@@ -329,29 +343,6 @@ div.project_skill {
 	margin-right: 25px;
 	font-size: 1.5em;
 }
-
-/*div.project_skill:nth-child(1){
-	top: 30px;
-}
-
-div.project_skill:nth-child(2){
-	top: 50px;
-}
-
-div.project_skill:nth-child(3){
-	top: 70px;
-}
-
-div.project_skill:nth-child(4){
-	top: 90px;}
-
-div.project_skill:nth-child(5){
-	top: 110px;
-}
-
-div.project_skill:nth-child(6){
-	top: 130px;
-}*/
 
 div.project_skill:nth-child(1){
 	top: 30px;
