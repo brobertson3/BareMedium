@@ -5,7 +5,7 @@
 @media screen and (min-width: 590px) {
 	/*** General ***/
 	body p, ol li {
-		font-size: 1.4rem;
+		font-size: 1.6rem;
 	}
 
 	h2 {
@@ -71,7 +71,7 @@
 @media screen and (min-width: 768px) {
 	/*** General ***/
 	body p, ol li {
-		font-size: 1.5rem;
+		/*font-size: 1.8rem;*/
 	}
 
 	.home_container h1 {
@@ -147,7 +147,7 @@
 @media screen and (min-width: 990px) {
 	/* General */
 	body p, ol li {
-		font-size: 1.7rem;
+		/*font-size: 2.0rem;*/
 	}
 
 	.home_container h1 {

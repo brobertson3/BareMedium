@@ -6,7 +6,7 @@ body {
 }
 
 body p, ol li {
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 }
 
 h1, h2, h3 {
@@ -67,6 +67,11 @@ a {
 
 .home_container h1 {
 	font-size: 5rem;
+}
+
+.home_container p {
+	font-weight: bold;
+	color: red;
 }
 
 .bg_home {
