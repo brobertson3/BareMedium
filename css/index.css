@@ -9,6 +9,10 @@ body p, ol li {
 	font-size: 1.5rem;
 }
 
+#contact_thanks {
+ 	font-size: 2.0rem;
+}
+
 h1, h2, h3 {
 	margin-top: 20px;
 	margin-bottom: 20px;

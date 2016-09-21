@@ -70,6 +70,11 @@ $(document).ready(function () {
 		}
 	});
 
-	/* TODO On click of #read_more we need to pop up a dialog box of some sort
-	   to display the rest of the contents of the description. */
+	/* Change the text to reflect that the user submitted a message */
+	$('#contact_form').submit(function () {
+		$('#contact_greeting').replaceWith('<p id="contact_thanks">Thanks for your request. Make another one!</p>');
+		$(this)[0].reset();
+		$(this)[1].reset();
+		$(this)[2].reset();
+	});
 });	

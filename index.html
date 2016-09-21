@@ -231,25 +231,26 @@
 
         <div class="container-fluid contact_me_container" id="contact_me">
             <h2>Contact Me</h2>
-            <p>Drop me a note below if you would like me to work on a project...or just to chat!</p>
+            <p id="contact_greeting">Drop me a note below if you would like me to work on a project...or just to chat!</p>
             <div class="row">
                 <!-- Small screen I want each to take up entire width.
                 Medium and up it can go side by side. -->
                 <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 contact_form">
-                    <form>
+                    <form action="mailto:brent.robertson3@gmail.com" enctype="text/plain" method="post" id="contact_form">
                         <div class="form-group">
                             <label for="inputName">Name:</label>
-                            <input type="text" class="form-control" id="inputName" placeholder="Full Name">
+                            <input type="text" class="form-control" name="Name" id="inputName" placeholder="Full Name">
+                            <!-- <input name="Name" type="text" id="Name" size="40"> -->
                         </div>
                         <div class="form-group">
                             <label for="inputEmail">Email:</label>
-                            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                            <input type="email" class="form-control" name="Email" id="inputEmail" placeholder="Email">
                         </div>
                         <div class="form-group">
                             <label for="inputMessage">Message:</label>
-                            <textarea rows="10" class="form-control" id="inputMessage" placeholder="Speak to me..."></textarea>
+                            <textarea rows="10" class="form-control" id="inputMessage" name="Message" placeholder="Speak to me..."></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" id="contact_submit" value="Submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
                 <!-- Offset one for medium to provide spacing between form and links -->
