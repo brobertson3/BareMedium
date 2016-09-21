@@ -416,6 +416,11 @@ div.thumbnail p{
 	margin-bottom: 30px;
 }
 
+.contact_me_container button[type="submit"] {
+	width: 15%;
+	min-width: 100px;
+}
+
 .contact_links {
 	margin: 0 auto;
 }
