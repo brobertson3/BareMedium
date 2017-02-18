@@ -44,6 +44,7 @@ a {
 .navbar {
 	margin-bottom: 0;
 	font-size: 2rem;
+	text-align: left;
 }
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
@@ -56,6 +57,11 @@ a {
 
 .navbar-fixed-top {
 	border-width: 0;
+}
+
+img.logo {
+	margin-top: 10px;
+	margin-right: 10px;
 }
 
 /************************* Home section *************************/

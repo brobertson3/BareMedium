@@ -86,6 +86,11 @@
 		font-size: 4rem;
 	}
 
+	/*** Header ***/
+	.navbar-header {
+		float: left !important;
+	}
+
 	/*** Portfolio Work ***/
 	/*.thumbnail_container {
 		height: 250px;
