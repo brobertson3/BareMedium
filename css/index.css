@@ -1,6 +1,7 @@
 /*********************** All the sections ***********************/
 body {
-	font-family: 'Life Savers', sans-serif;
+	font-family: 'PT Serif', sans-serif;
+	font-weight: 400;
 	text-align: center;
 	min-width: 300px;
 }
@@ -17,6 +18,7 @@ h1, h2, h3 {
 	margin-top: 20px;
 	margin-bottom: 20px;
 	font-family: 'Permanent Marker', sans-serif;
+	/*font-family: 'Arvo', sans-serif;*/
 	text-align: center;
 }
 
@@ -461,6 +463,10 @@ div.thumbnail p{
 
 .contact_links ul {
 	text-align: center;
+}
+
+#contact_submit {
+	margin-top: 10px;
 }
 
 /********************** Footer section **********************/
