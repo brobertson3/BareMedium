@@ -50,11 +50,11 @@ a {
 }
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
-	background-color: red;
+	background-color: rgb(196, 0, 16);
 }
 
 .navbar-inverse .navbar-nav > li:nth-child(2n).active > a, .navbar-inverse .navbar-nav > li:nth-child(2n).active > a:focus, .navbar-inverse .navbar-nav > li:nth-child(2n).active > a:hover {
-	background-color: blue;
+	background-color: rgb(32, 72, 149);
 }
 
 .navbar-fixed-top {
@@ -83,7 +83,7 @@ img.logo {
 
 .home_container p {
 	font-weight: bold;
-	color: red;
+	color: rgb(196, 0, 16);
 }
 
 .bg_home {
@@ -101,7 +101,7 @@ img.logo {
 
 /********************** About Me section **********************/
 .about_me_container {
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 }
 
 .about_me_container h2:first-child {
@@ -157,7 +157,7 @@ img.logo {
 
 .strike_through {
 	text-decoration: line-through;
-	color: red;
+	color: rgb(196, 0, 16);
 }
 
 .strike_through_text {
@@ -182,6 +182,8 @@ img.logo {
 	width: 33.333%;
 	display: inline;
 	float: left;
+	margin-bottom: 20px;
+	margin-top: 20px;
 }
 
 .skill {
@@ -204,6 +206,18 @@ img.logo {
 	margin: 0 0 20px 0;
 	margin-right: 0;
 	margin-left: 0;
+	opacity: 0;
+}
+
+.fade_in {
+	animation-name: fade_in_content;
+	animation-timing-function: linear;
+	animation-duration: 3s;
+}
+
+@keyframes fade_in_content {
+	from { opacity: 0; }
+	to { opacity: 1; }
 }
 
 /* The animation code */
@@ -280,6 +294,10 @@ img.logo {
 }*/
 
 /************************* Portfolio section *************************/
+
+.portfolio_container {
+	margin-bottom: 30px;
+}
 
 h4.modal-title {
 	font-family: 'Permanent Marker', sans-serif;
@@ -407,6 +425,7 @@ div.thumbnail p{
 .coming_soon .thumbnail p {
 	font-size: 3rem;
 }
+
 /* TODO need to change these colors to match the theme of the site*/
 /*div.thumbnail:hover {
 	background-color: #ff0000;
@@ -421,7 +440,6 @@ div.thumbnail p{
 
 .contact_me_container {
 	padding-bottom: 30px;
-	padding: 30px;
 }
 
 .contact_me_container > p {

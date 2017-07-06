@@ -77,4 +77,59 @@ $(document).ready(function () {
 		$(this)[1].reset();
 		$(this)[2].reset();
 	});
+
+	$(window).on('scroll', function () {
+    	var scrollTop        = $(window).scrollTop(),     // Number of pixels hidden from view above scrollable area
+        	skillsOffset     = $('#skills').offset().top, // Current coordinates of element from top of document
+        	homeOffset       = $('#home').offset().top,
+        	aboutOffset      = $('#about_me').offset().top,
+        	portfolioOffset  = $('#portfolio').offset().top,
+        	contactOffset    = $('#contact_me').offset().top,
+        	windowHeight     = $(window).height(),        // Height of the current viewable window
+        	skillsHeight     = $('.inner_skills_container').height(),  // Height of the element
+        	skillsDistanceBottom  = windowHeight - (skillsOffset - scrollTop) - skillsHeight, // Distance of bottom of elment from bottom of window
+        	skillsDistanceTop     = skillsOffset - scrollTop - 20,
+        	homeDistanceTop      = homeOffset - scrollTop - 20,
+        	aboutDistanceTop      = aboutOffset - scrollTop - 20,
+        	portfolioDistanceTop  = portfolioOffset - scrollTop - 20,
+        	contactDistanceTop    = contactOffset - scrollTop - 20;
+
+        
+        //console.log(distance);
+
+        var navItems = $('#nav_home, #nav_about, #nav_blog, #nav_skills, #nav_portfolio, #nav_contact');
+        
+        if (skillsDistanceBottom >= 0) {
+        	$('.inner_skills_container').addClass('fade_in').css('opacity', '1');
+        } 
+
+        if (homeDistanceTop <= 0 && aboutDistanceTop >= 0) {
+        	navItems.removeClass('active');
+        	$('#nav_home').addClass('active');
+        } else if (aboutDistanceTop <= 0 && skillsDistanceTop >= 0) {
+        	navItems.removeClass('active');
+        	$('#nav_about').addClass('active');
+        } else if (skillsDistanceTop <= 0 && portfolioDistanceTop >= 0) {
+        	navItems.removeClass('active');
+        	$('#nav_skills').addClass('active');
+        } else if (portfolioDistanceTop <= 0 && contactDistanceTop >= 0) {
+        	navItems.removeClass('active');
+        	$('#nav_portfolio').addClass('active');
+        } else if (contactDistanceTop <= 0) {
+        	navItems.removeClass('active');
+        	$('#nav_contact').addClass('active');
+        }
+	});
+
 });	
+
+
+
+
+
+
+
+
+
+
+
