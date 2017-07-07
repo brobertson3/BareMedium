@@ -54,7 +54,7 @@ a {
 }
 
 .navbar-inverse .navbar-nav > li:nth-child(2n).active > a, .navbar-inverse .navbar-nav > li:nth-child(2n).active > a:focus, .navbar-inverse .navbar-nav > li:nth-child(2n).active > a:hover {
-	background-color: rgb(32, 72, 149);
+	background-color: rgb(196, 0, 16)rgb(32, 72, 149);
 }
 
 .navbar-fixed-top {
@@ -188,14 +188,14 @@ img.logo {
 
 .skill {
 	border-radius: 50%;
-	border: 2px solid blue;
+	border: 2px solid rgb(32, 72, 149);
 	height: 75px;
 	width: 75px;
 	margin: 0 auto;
 }
 
 .skill_shell:nth-child(2n) .skill{
-	border-color: red;
+	border-color: rgb(196, 0, 16);
 }
 
 .skill_banner {
@@ -326,7 +326,7 @@ h4.modal-title {
 
 /* Make all of the links red inside of the p. */
 .brief_description a {
-	color: red;
+	color: rgb(196, 0, 16);
 }
 
 .thumbnail_title a{

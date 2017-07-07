@@ -34,9 +34,9 @@ $(document).ready(function () {
 		if ($(this).parent().hasClass('dashed_border')) { 
 			// Do nothing for upcoming work
 		} else if(index % 2 === 0) { //even
-			$(this).parent().children('.thumbnail').css('backgroundColor', '#ff0000');
+			$(this).parent().children('.thumbnail').css('backgroundColor', 'rgb(196, 0, 16)');
 		} else { //odd
-			$(this).parent().children('.thumbnail').css('backgroundColor', '#0000ff');
+			$(this).parent().children('.thumbnail').css('backgroundColor', 'rgb(32, 72, 149)');
 		}
 	}, function () {
 		/* Add the hidden class back so that the skills are hidden when not hovering. */
@@ -48,7 +48,7 @@ $(document).ready(function () {
 	$('.fa.fa-fw').hover(function () {
 		// $(this).removeClass('fa-2x');
 		// $(this).addClass('fa-4x');
-		$(this).css("color", "red");
+		$(this).css("color", "rgb(196, 0, 16)");
 	}, function () {
 		// $(this).removeClass('fa-4x');
 		// $(this).addClass('fa-2x');
@@ -89,7 +89,7 @@ $(document).ready(function () {
         	skillsHeight     = $('.inner_skills_container').height(),  // Height of the element
         	skillsDistanceBottom  = windowHeight - (skillsOffset - scrollTop) - skillsHeight, // Distance of bottom of elment from bottom of window
         	skillsDistanceTop     = skillsOffset - scrollTop - 20,
-        	homeDistanceTop      = homeOffset - scrollTop - 20,
+        	homeDistanceTop       = homeOffset - scrollTop - 20,
         	aboutDistanceTop      = aboutOffset - scrollTop - 20,
         	portfolioDistanceTop  = portfolioOffset - scrollTop - 20,
         	contactDistanceTop    = contactOffset - scrollTop - 20;
