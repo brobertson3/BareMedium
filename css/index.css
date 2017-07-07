@@ -186,7 +186,7 @@ img.logo {
 	margin-top: 20px;
 }
 
-.skill {
+.border_skill {
 	border-radius: 50%;
 	border: 2px solid rgb(32, 72, 149);
 	height: 75px;
@@ -194,13 +194,15 @@ img.logo {
 	margin: 0 auto;
 }
 
-.skill_shell:nth-child(2n) .skill{
+.skill_shell:nth-child(2n) .border_skill{
 	border-color: rgb(196, 0, 16);
 }
 
 .skill_banner {
 	line-height: 75px;
 }
+
+
 
 .inner_skills_container {
 	margin: 0 0 20px 0;
@@ -218,6 +220,10 @@ img.logo {
 @keyframes fade_in_content {
 	from { opacity: 0; }
 	to { opacity: 1; }
+}
+
+@keyframes text_fall {
+	
 }
 
 /* The animation code */
