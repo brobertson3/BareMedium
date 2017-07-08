@@ -62,10 +62,8 @@ $(document).ready(function () {
 
 	function checkBrowserWidth() {
 		if ($(window).width() >= 768) {
-			console.log('greater');
 			$('.fa.fa-fw').addClass('fa-3x');
 		} else {
-			console.log('Less');
 			$('.fa.fa-fw').removeClass('fa-3x');
 		}
 	}
@@ -73,7 +71,7 @@ $(document).ready(function () {
 	window.addEventListener("resize", checkBrowserWidth);
 
 	/* On hover, show the pulsing arrows, else hide the arrows */
-	$('.thumbnail_container').hover(function (event) {
+	$('.thumbnail_container').hover(function(event) {
 		if ($(this).hasClass("rethree_image")) {
 			$('.thumbnail_title.rethree').siblings().removeClass("hidden");
 		} else if ($(this).hasClass("baremedium_image")) {
@@ -136,6 +134,56 @@ $(document).ready(function () {
         	navItems.removeClass('active');
         	$('#nav_contact').addClass('active');
         }
+	});
+
+	var skillsList = {
+		first: "html",
+		second: "css",
+		third: "javascript",
+		fourth: "bootstrap",
+		fifth: "flexbox",
+		sixth: "wordpress"
+	}
+
+	$('.skill_shell').hover(function(event) {
+		// var x;
+		// for (x in skillList) {
+		// 	if ("#" + skillsList.x === $(this).find('.skill_banner').('#html')
+		// }
+		if ($(this).find('.skill_banner').is('#' + skillsList.first)) {
+			
+			console.log("html");
+			setTimeout(function() {
+				$('#' + skillsList.first).text("I");
+			}, 0);
+			setTimeout(function() {
+				$('#' + skillsList.first).text("Will");
+			}, 1000);
+			setTimeout(function() {
+				$('#' + skillsList.first).text("Change");
+			}, 2000);
+			setTimeout(function() {
+				$('#' + skillsList.first).text("The");
+			}, 3000);
+			setTimeout(function() {
+				$('#' + skillsList.first).text("World!");
+			}, 4000);
+
+		} else if ($(this).find('.skill_banner').is('#' + skillsList.second)) {
+			console.log("css");
+			$("#blackout").addClass('blackout');
+			$(this).find('.skill_banner').addClass('css_trick');
+		} else if ($(this).find('.skill_banner').is('#' + skillsList.third)) {
+			console.log("javascript");
+		} else if ($(this).find('.skill_banner').is('#' + skillsList.fourth)) {
+			console.log("bootstrap");
+		} else if ($(this).find('.skill_banner').is('#' + skillsList.fifth)) {
+			console.log("flexbox");
+		} else if ($(this).find('.skill_banner').is('#' + skillsList.sixth)) {
+			console.log("wordpress");
+		}
+	}, function(event) {
+		// DO something to bring back to normal
 	});
 
 });	

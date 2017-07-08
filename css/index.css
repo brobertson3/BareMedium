@@ -215,10 +215,58 @@ img.logo {
 	animation-duration: 3s;
 }
 
-@keyframes fade_in_content {
-	from { opacity: 0; }
-	to { opacity: 1; }
+.blackout {
+	position:fixed;
+    padding:0;
+    margin:0;
+
+    top:0;
+    left:0;
+
+    width: 100%;
+    height: 100%;
+    background:rgb(0,0,0);
+    opacity: 0;
+    z-index: 100;
+	animation-name: fade_in_content;
+	animation-timing-function: linear;
+	animation-duration: 5s;
 }
+
+.css_trick {
+	animation-name: css_magic;
+	animation-timing-function: linear;
+	animation-duration: 5s;
+	position: relative;
+	opacity: 1;
+	z-index: 101;
+}
+
+@keyframes fade_in_content {
+	0% { opacity: 0; }
+	50% { opacity: 1; }/*
+	100% { opacity: 1; }*/
+}
+
+@keyframes css_magic {
+	0% { font-size: inherit;
+		 color: inherit; }
+	37% {
+		color: #fff;
+	}
+	50% { font-size: 3.7em; 
+		  color: #fff; }
+	/*100% { font-size: 3.7em;
+		   color: #fff; }*/
+
+}
+
+/*@keyframes blackout_content {
+	from { background-color: inherit;
+		   color: inherit; }
+	to { background-color: #000;
+		 color: #000; }
+}*/
 
 /* The animation code */
 /*@keyframes rolling_html_circle {
