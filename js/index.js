@@ -1,4 +1,8 @@
 $(document).ready(function () {
+
+	// Initially check browser width for sizing of contact links
+	checkBrowserWidth();
+
 	/* On hover - remove the hidden class and blurred_image to show the 'The Real Me' 
 	   text and clear profile picture. */
 	$('.main_image_div').hover(function () {
@@ -53,7 +57,20 @@ $(document).ready(function () {
 		// $(this).removeClass('fa-4x');
 		// $(this).addClass('fa-2x');
 		$(this).css("color", "inherit");
+
 	});
+
+	function checkBrowserWidth() {
+		if ($(window).width() >= 768) {
+			console.log('greater');
+			$('.fa.fa-fw').addClass('fa-3x');
+		} else {
+			console.log('Less');
+			$('.fa.fa-fw').removeClass('fa-3x');
+		}
+	}
+
+	window.addEventListener("resize", checkBrowserWidth);
 
 	/* On hover, show the pulsing arrows, else hide the arrows */
 	$('.thumbnail_container').hover(function (event) {
