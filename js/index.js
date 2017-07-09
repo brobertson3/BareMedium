@@ -144,15 +144,19 @@ $(document).ready(function () {
 		fifth: "flexbox",
 		sixth: "wordpress"
 	}
+var runOnce = false;
 
+var youShallNotRun = false;
 	$('.skill_shell').hover(function(event) {
 		// var x;
 		// for (x in skillList) {
 		// 	if ("#" + skillsList.x === $(this).find('.skill_banner').('#html')
 		// }
-		if ($(this).find('.skill_banner').is('#' + skillsList.first)) {
+		if ($(this).find('.skill_banner').is('#' + skillsList.first) && (!youShallNotRun)) {
 			
 			console.log("html");
+			youShallNotRun = true;
+
 			setTimeout(function() {
 				$('#' + skillsList.first).text("I");
 			}, 0);
@@ -168,11 +172,26 @@ $(document).ready(function () {
 			setTimeout(function() {
 				$('#' + skillsList.first).text("World!");
 			}, 4000);
+			setTimeout(function() {
+				$('#' + skillsList.first).text("HTML5");
+				youShallNotRun = false;
+			}, 5000);
 
 		} else if ($(this).find('.skill_banner').is('#' + skillsList.second)) {
 			console.log("css");
-			$("#blackout").addClass('blackout');
-			$(this).find('.skill_banner').addClass('css_trick');
+
+			if (!runOnce && (!youShallNotRun)) {
+				youShallNotRun = true;
+				runOnce = true;
+				$("#blackout").addClass('blackout');
+				$(this).find('.skill_banner').addClass('css_trick');
+			}
+			setTimeout(function() {
+				$("#blackout").removeClass('blackout');
+				$(this).find('.skill_banner').removeClass('css_trick');
+				youShallNotRun = false;
+			}, 6000);
+
 		} else if ($(this).find('.skill_banner').is('#' + skillsList.third)) {
 			console.log("javascript");
 		} else if ($(this).find('.skill_banner').is('#' + skillsList.fourth)) {
@@ -184,6 +203,22 @@ $(document).ready(function () {
 		}
 	}, function(event) {
 		// DO something to bring back to normal
+		if ($(this).find('.skill_banner').is('#' + skillsList.first)) {
+			
+			console.log("html");
+			
+		} else if ($(this).find('.skill_banner').is('#' + skillsList.second)) {
+			console.log("css");
+			
+		} else if ($(this).find('.skill_banner').is('#' + skillsList.third)) {
+			console.log("javascript");
+		} else if ($(this).find('.skill_banner').is('#' + skillsList.fourth)) {
+			console.log("bootstrap");
+		} else if ($(this).find('.skill_banner').is('#' + skillsList.fifth)) {
+			console.log("flexbox");
+		} else if ($(this).find('.skill_banner').is('#' + skillsList.sixth)) {
+			console.log("wordpress");
+		}
 	});
 
 });	
