@@ -144,10 +144,26 @@ $(document).ready(function () {
 		fifth: "flexbox",
 		sixth: "wordpress"
 	}
+// Used to make the CSS skill animation only run once
 var runOnce = false;
-
+// Used to halt all other animations in the skill section from running
 var youShallNotRun = false;
-	$('.skill_shell').hover(function(event) {
+
+	$('.border_skill').hover(function(event) {
+		if(!youShallNotRun) {
+			$(this).css('cursor', 'pointer');
+			var original = $(this).find('.skill_banner').text();
+			$(this).data('original', original);
+			$(this).find('.skill_banner').text("Click Me");
+		}
+		
+	}, function(event) {
+		if(!youShallNotRun) {	
+			$(this).find('.skill_banner').text($(this).data('original'));
+		}
+	});
+
+	$('.border_skill').click(function(event) {
 		// var x;
 		// for (x in skillList) {
 		// 	if ("#" + skillsList.x === $(this).find('.skill_banner').('#html')
@@ -177,41 +193,39 @@ var youShallNotRun = false;
 				youShallNotRun = false;
 			}, 5000);
 
-		} else if ($(this).find('.skill_banner').is('#' + skillsList.second)) {
+		} else if ($(this).find('.skill_banner').is('#' + skillsList.second) && (!youShallNotRun)) {
 			console.log("css");
 
-			if (!runOnce && (!youShallNotRun)) {
+			if (!runOnce) {
+				$('#' + skillsList.second).text("CSS3");
 				youShallNotRun = true;
 				runOnce = true;
 				$("#blackout").addClass('blackout');
 				$(this).find('.skill_banner').addClass('css_trick');
-			}
-			setTimeout(function() {
+				setTimeout(function() {
 				$("#blackout").removeClass('blackout');
 				$(this).find('.skill_banner').removeClass('css_trick');
-				youShallNotRun = false;
-			}, 6000);
+					youShallNotRun = false;
+				}, 6000);
+			} else {
+				$('#css').popover({
+					content: "Sorry, I only have enough chakra do that trick once.",
+					placement: "bottom",
+				});
+				setTimeout(function() {
+					$('#css').popover("show");
+				}, 200);
 
-		} else if ($(this).find('.skill_banner').is('#' + skillsList.third)) {
+				setTimeout(function() {
+					$('#css').popover("destroy");
+				}, 3200);
+			}
+			
+
+		} else if ($(this).find('.skill_banner').is('#' + skillsList.third) && (!youShallNotRun)) {
 			console.log("javascript");
-		} else if ($(this).find('.skill_banner').is('#' + skillsList.fourth)) {
-			console.log("bootstrap");
-		} else if ($(this).find('.skill_banner').is('#' + skillsList.fifth)) {
-			console.log("flexbox");
-		} else if ($(this).find('.skill_banner').is('#' + skillsList.sixth)) {
-			console.log("wordpress");
-		}
-	}, function(event) {
-		// DO something to bring back to normal
-		if ($(this).find('.skill_banner').is('#' + skillsList.first)) {
-			
-			console.log("html");
-			
-		} else if ($(this).find('.skill_banner').is('#' + skillsList.second)) {
-			console.log("css");
-			
-		} else if ($(this).find('.skill_banner').is('#' + skillsList.third)) {
-			console.log("javascript");
+
+
 		} else if ($(this).find('.skill_banner').is('#' + skillsList.fourth)) {
 			console.log("bootstrap");
 		} else if ($(this).find('.skill_banner').is('#' + skillsList.fifth)) {
@@ -220,7 +234,68 @@ var youShallNotRun = false;
 			console.log("wordpress");
 		}
 	});
+	// }, function(event) {
+	// 	// DO something to bring back to normal
+	// 	if ($(this).find('.skill_banner').is('#' + skillsList.first)) {
+			
+	// 		console.log("html");
+			
+	// 	} else if ($(this).find('.skill_banner').is('#' + skillsList.second)) {
+	// 		console.log("css");
+			
+	// 	} else if ($(this).find('.skill_banner').is('#' + skillsList.third)) {
+	// 		console.log("javascript");
+	// 	} else if ($(this).find('.skill_banner').is('#' + skillsList.fourth)) {
+	// 		console.log("bootstrap");
+	// 	} else if ($(this).find('.skill_banner').is('#' + skillsList.fifth)) {
+	// 		console.log("flexbox");
+	// 	} else if ($(this).find('.skill_banner').is('#' + skillsList.sixth)) {
+	// 		console.log("wordpress");
+	// 	}
+	// });
 
+	function wordpress_animation() {
+		$('#wordpress').popover({
+			content: "Hey, looks like your code broke!",
+			placement: "bottom"
+		});
+		setTimeout(function() {
+			$('#wordpress').popover("show");
+		}, 1000);
+
+		setTimeout(function() {
+			$('#wordpress').popover("destroy");
+		}, 4000);
+	
+		setTimeout(function() {
+			// $('#popover_wordpress').popover("destroy");
+			$('#wordpress').popover({
+				content: "Luckily, I can fix it!",
+				placement: "bottom"
+			});
+			$('#wordpress').popover("show");
+		}, 5000);
+
+		setTimeout(function() {
+			$('#wordpress').popover("destroy");
+		}, 8000);
+	
+		setTimeout(function() {
+			// $('#popover_wordpress').popover("destroy");
+			$('#wordpress').popover({
+				content: "Do you want me to?",
+				placement: "bottom",
+				template: '<div class="popover"><div class="arrow"></div>' + 
+				      '<div class="popover-content"></div>' +
+				      '<div class="popover-footer"><button type="button" class="btn btn-primary wordpress_button">' +
+				      '<i class="fa fa-check"></i></button>&nbsp;'+
+				      '<button type="button" class="btn btn-danger wordpress_button">' +
+				      '<i class="fa fa-fw fa-times"></i></button>&nbsp;'+
+				      '</div>',
+			});
+			$('#wordpress').popover("show");
+		}, 9000);
+	}
 });	
 
 

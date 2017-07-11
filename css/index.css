@@ -261,6 +261,19 @@ img.logo {
 
 }
 
+.popover-content {
+	font-size: 1.5rem;
+}
+
+.popover-footer {
+	text-align: center;
+}
+
+.wordpress_button {
+	
+}
+
+
 /*@keyframes blackout_content {
 	from { background-color: inherit;
 		   color: inherit; }
