@@ -144,22 +144,28 @@ $(document).ready(function () {
 		fifth: "flexbox",
 		sixth: "wordpress"
 	}
-// Used to make the CSS skill animation only run once
-var runOnce = false;
-// Used to halt all other animations in the skill section from running
-var youShallNotRun = false;
+	// Used to make the CSS skill animation only run once
+	var runOnce = false;
+	// Used to halt all other animations in the skill section from running
+	var youShallNotRun = false;
 
 	$('.border_skill').hover(function(event) {
 		if(!youShallNotRun) {
+			// var original = $(this).find('.skill_banner').text();
 			$(this).css('cursor', 'pointer');
-			var original = $(this).find('.skill_banner').text();
-			$(this).data('original', original);
-			$(this).find('.skill_banner').text("Click Me");
+			// console.log("this is the original:" + original);
+			// $(this).data('original', original);
+			// setTimeout(function() {
+				// $(this).find('.skill_banner').text("Click!");
+			// }, 1000);
+			// $(this).find('.skill_banner').text("Click!");
+		} else {
+			$(this).css('cursor', 'not-allowed');
 		}
 		
 	}, function(event) {
 		if(!youShallNotRun) {	
-			$(this).find('.skill_banner').text($(this).data('original'));
+			// $(this).find('.skill_banner').text($(this).data('original'));
 		}
 	});
 
@@ -223,8 +229,49 @@ var youShallNotRun = false;
 			
 
 		} else if ($(this).find('.skill_banner').is('#' + skillsList.third) && (!youShallNotRun)) {
+			
 			console.log("javascript");
+			youShallNotRun = true;
+			$(this).find('#javascript').html('<span id="java">Java</span><span id="script">Script</span>');
+			
+			// console.log($(this).find("#javascript").html());
+			var banner = $(this).children('.skill_banner');
+			var i = 0;
+			// var rect = banner.getBoundingClientRect();
 
+			$(this).css('border', 'none');
+			// var banner = $(this).children('.skill_banner');
+			// banner.text("JavaScript");
+			// var move;
+			var js_banner_y = banner.offset().top;
+			var wordpress_banner_y = $('#popover_wordpress').parent().offset().top;
+			var circle_height = $('.skill_banner').css('line-height');
+			circle_height = parseInt(circle_height, 10);
+			console.log("banner: " + js_banner_y + " wordpress: " + wordpress_banner_y + " circle: " + circle_height);
+			move = wordpress_banner_y - js_banner_y - (circle_height/2) - 10;
+			console.log(move);
+
+			$(this).animate({top: move + 'px'}, "slow", function() {
+				$(this).find('#javascript').addClass('spin');
+				setTimeout(function() {
+					wordpress_animation();
+				}, 700);
+				// $(this).find('#javascript').animate({opacity: "1"}, 0);
+			});
+
+			// $(this).find('#javascript').animate({opacity: "0"}, 2000);
+			// console.log($(this).find('#java').attr('id'));
+			// $(this).find('#javascript').css("display","none");
+			// $('#java').css({'position': 'absolute'});
+			// console.log($('#java').css("position"));
+
+			// $(this).find('#javascript').addClass('spin');
+			// setTimeout(function() {
+				// $(this).find('#javascript').animate({opacity: "0"});
+			// }, 1000);
+			
+			// $('#java').css({"transform": "rotate(120deg)"});
+			// $(this).find('#java').css({"transform": "rotate(120deg)"});
 
 		} else if ($(this).find('.skill_banner').is('#' + skillsList.fourth)) {
 			console.log("bootstrap");
@@ -253,49 +300,133 @@ var youShallNotRun = false;
 	// 		console.log("wordpress");
 	// 	}
 	// });
+var move;
+	function javascript_animation() {
+		// 1. Remove popover from the screen.
+		$('#wordpress').popover("destroy");
+
+		// 2. Move the JavaScript circle back to it's original place on the page (still hidden)
+		// $('#javascript').parent().animate({top: 0, width: 100 + "px"}, 1000, function() {
+			// This will be changed..right now just showing that the circle is where it should be
+			// setTimeout(function() {
+			// 	$('#javascript').parent().css('border', '2px solid rgb(32, 72, 149)');	
+			// }, 500);
+
+			// // 3. Put image of Extra Life where the JavaScript should be
+			// $('#javascript').html('<img src="img/ExtraLife.svg" height="10" width="10">');
+			// $('#javascript').removeClass('spin');
+
+			// // 4. Blink in the Javascript along with the border
+			// setTimeout(function() {
+			// 	$('#javascript').parent().html('<span class="skill_banner" id="javascript"><span id="java">Java</span><span id="script">Script</span></span>');
+			// 	$('#javascript').parent().addClass('skill_blink');	
+			// 	$('#javascript').parent().css('border', '2px solid rgb(32, 72, 149)');				
+			// }, 1500);
+
+			// // 5. Make sure that youShallNotRun is set back to false
+			// setTimeout(function() {
+			// 	$('#javascript').parent().removeClass('skill_blink');
+			// 	youShallNotRun = false;
+			// }, 2200);
+			
+
+		// });
+
+		// 3. Put image of Extra Life where the JavaScript should be
+		$('#javascript').html('<img id="extra_life_image" src="img/ExtraLife.svg" height="10" width="10">');
+
+		$('#javascript').parent().animate({top: 0}, 1000);
+		$('#extra_life_image').animate({width: 100 + "px", height: 100 + "px"}, 1000);
+		
+		
+			$('#javascript').removeClass('spin');
+
+			// 4. Blink in the Javascript along with the border
+			setTimeout(function() {
+				$('#javascript').parent().html('<span class="skill_banner" id="javascript"><span id="java">Java</span><span id="script">Script</span></span>');
+				$('#javascript').parent().addClass('skill_blink');	
+				$('#javascript').parent().css('border', '2px solid rgb(32, 72, 149)');				
+			}, 1500);
+
+			// 5. Make sure that youShallNotRun is set back to false
+			setTimeout(function() {
+				$('#javascript').parent().removeClass('skill_blink');
+				youShallNotRun = false;
+			}, 2200);
+	}
 
 	function wordpress_animation() {
 		$('#wordpress').popover({
 			content: "Hey, looks like your code broke!",
-			placement: "bottom"
+			placement: "top"
 		});
 		setTimeout(function() {
 			$('#wordpress').popover("show");
-		}, 1000);
+		}, 500);
 
 		setTimeout(function() {
 			$('#wordpress').popover("destroy");
-		}, 4000);
+		}, 2500);
 	
 		setTimeout(function() {
 			// $('#popover_wordpress').popover("destroy");
 			$('#wordpress').popover({
 				content: "Luckily, I can fix it!",
-				placement: "bottom"
+				placement: "top"
 			});
 			$('#wordpress').popover("show");
-		}, 5000);
+		}, 3000);
 
 		setTimeout(function() {
 			$('#wordpress').popover("destroy");
-		}, 8000);
+		}, 5000);
 	
 		setTimeout(function() {
 			// $('#popover_wordpress').popover("destroy");
 			$('#wordpress').popover({
 				content: "Do you want me to?",
-				placement: "bottom",
+				placement: "top",
 				template: '<div class="popover"><div class="arrow"></div>' + 
 				      '<div class="popover-content"></div>' +
-				      '<div class="popover-footer"><button type="button" class="btn btn-primary wordpress_button">' +
+				      '<div class="popover-footer"><button type="button" id="confirm_wordpress" class="btn btn-primary wordpress_button">' +
 				      '<i class="fa fa-check"></i></button>&nbsp;'+
-				      '<button type="button" class="btn btn-danger wordpress_button">' +
+				      '<button type="button" id="deny_wordpress" class="btn btn-danger wordpress_button">' +
 				      '<i class="fa fa-fw fa-times"></i></button>&nbsp;'+
 				      '</div>',
 			});
 			$('#wordpress').popover("show");
-		}, 9000);
+		}, 5500);
 	}
+
+	$('body').on("click", "#confirm_wordpress", javascript_animation);
+
+	$('body').on("click", "#deny_wordpress", function(event) {
+		// console.log("Denied Wordpress");
+
+		/*
+		 *  TODO: 1. Popover that says "Well, I'll do it anyway"
+		 */
+		$('#wordpress').popover("destroy");
+		
+		setTimeout(function() {
+			$('#wordpress').popover({
+				content: "Sorry, I can't let a good skill go to waste.",
+				placement: "top",	
+			});
+
+			$('#wordpress').popover("show");
+		}, 500);
+		
+
+		setTimeout(function() {
+			$('#wordpress').popover("destroy");
+			javascript_animation();
+		}, 2500);
+
+		// $('#popover_wordpress').popover("destroy");
+
+	});
+
 });	
 
 
