@@ -1,13 +1,14 @@
 /*********************** All the sections ***********************/
 body {
-	font-family: 'PT Serif', sans-serif;
-	font-weight: 400;
+	font-family: 'Didact Gotham', sans-serif;
+	font-weight: 100;
 	text-align: center;
 	min-width: 300px;
 }
 
 body p, ol li {
 	font-size: 1.5rem;
+	letter-spacing: 0.7px;
 }
 
 #contact_thanks {
@@ -42,6 +43,10 @@ a {
 	border-top: solid 30px transparent;
 }
 
+.inner_about_container, .inner_portfolio_container, .inner_contact_container {
+	opacity: 0;
+}
+
 /********************** Navigation section **********************/
 .navbar {
 	margin-bottom: 0;
@@ -68,6 +73,8 @@ img.logo {
 
 /************************* Home section *************************/
 .home_container {
+	/*background: #000000;*/
+	/*color: white; */
 	height: 600px;
 	position: relative;
 	z-index: 1;
@@ -87,21 +94,25 @@ img.logo {
 }
 
 .bg_home {
+	background: #000000;
+	color: white; 
 	/*background: url('http://thumb9.shutterstock.com/display_pic_with_logo/253597/236404216/stock-photo-programming-code-abstract-screen-of-software-developer-computer-script-blue-background-color-236404216.jpg') center center no-repeat fixed; */
-	background: url('../img/screenshot_code.png') center center no-repeat fixed;
-	background-size: cover;
+	/*background: url('../img/screenshot_code.png') center center no-repeat fixed;*/
+	/*background-size: cover;
 	opacity: 0.3;
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	z-index: -1;
+	z-index: -1;*/
 }
 
 /********************** About Me section **********************/
 .about_me_container {
 	margin-bottom: 40px;
+	/*background: #000000;*/
+	/*color: white;*/
 }
 
 .about_me_container h2:first-child {
@@ -274,6 +285,7 @@ img.logo {
 	animation-name: fade_in_content;
 	animation-timing-function: linear;
 	animation-duration: 3s;
+	animation-fill-mode: forwards;
 }
 
 .blackout {
@@ -305,7 +317,7 @@ img.logo {
 
 @keyframes fade_in_content {
 	0% { opacity: 0; }
-	50% { opacity: 1; }/*
+	100% { opacity: 1; }/*
 	100% { opacity: 1; }*/
 }
 

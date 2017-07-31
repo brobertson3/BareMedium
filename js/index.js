@@ -102,21 +102,42 @@ $(document).ready(function () {
         	contactOffset    = $('#contact_me').offset().top,
         	windowHeight     = $(window).height(),        // Height of the current viewable window
         	skillsHeight     = $('.inner_skills_container').height(),  // Height of the element
-        	skillsDistanceBottom  = windowHeight - (skillsOffset - scrollTop) - skillsHeight, // Distance of bottom of elment from bottom of window
-        	skillsDistanceTop     = skillsOffset - scrollTop - 20,
-        	homeDistanceTop       = homeOffset - scrollTop - 20,
-        	aboutDistanceTop      = aboutOffset - scrollTop - 20,
-        	portfolioDistanceTop  = portfolioOffset - scrollTop - 20,
-        	contactDistanceTop    = contactOffset - scrollTop - 20;
+        	aboutHeight      = $('.inner_about_container').height(),
+        	portfolioHeight  = $('.inner_portfolio_container').height(),
+        	contactHeight    = $('.inner_contact_container').height(),
+        	skillsDistanceBottom    = windowHeight - (skillsOffset - scrollTop) - skillsHeight, // Distance of bottom of elment from bottom of window
+        	aboutDistanceBottom     = windowHeight - (aboutOffset - scrollTop) - skillsHeight, // Distance of bottom of elment from bottom of window
+        	portfolioDistanceBottom = windowHeight - (portfolioOffset - scrollTop) - skillsHeight, // Distance of bottom of elment from bottom of window
+        	contactDistanceBottom   = windowHeight - (contactOffset - scrollTop) - skillsHeight, // Distance of bottom of elment from bottom of window
+        	skillsDistanceTop       = skillsOffset - scrollTop - 20,
+        	homeDistanceTop         = homeOffset - scrollTop - 20,
+        	aboutDistanceTop        = aboutOffset - scrollTop - 20,
+        	portfolioDistanceTop    = portfolioOffset - scrollTop - 20,
+        	contactDistanceTop      = contactOffset - scrollTop - 20;
 
         
-        //console.log(distance);
+        // console.log(contactOffset);
+        // console.log(contactDistanceTop);
+        // console.log(skillsDistanceBottom);
+        // console.log(contactHeight);
 
         var navItems = $('#nav_home, #nav_about, #nav_blog, #nav_skills, #nav_portfolio, #nav_contact');
         
+        if (aboutDistanceBottom >= 0) {
+        	$('.inner_about_container').addClass('fade_in');
+        }
+
         if (skillsDistanceBottom >= 0) {
-        	$('.inner_skills_container').addClass('fade_in').css('opacity', '1');
-        } 
+        	$('.inner_skills_container').addClass('fade_in');
+        }
+
+        if (portfolioDistanceBottom >= 0) {
+        	$('.inner_portfolio_container').addClass('fade_in');
+        }
+
+        if (contactDistanceBottom >= 0) {
+        	$('.inner_contact_container').addClass('fade_in');
+        }
 
         if (homeDistanceTop <= 0 && aboutDistanceTop >= 0) {
         	navItems.removeClass('active');
@@ -238,7 +259,6 @@ $(document).ready(function () {
 			var banner = $(this).children('.skill_banner');
 			var i = 0;
 			// var rect = banner.getBoundingClientRect();
-
 			$(this).css('border', 'none');
 			// var banner = $(this).children('.skill_banner');
 			// banner.text("JavaScript");

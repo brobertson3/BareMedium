@@ -12,7 +12,7 @@
         <link rel="stylesheet" type="text/css" href="fa/font-awesome.min.css">
         <link rel="stylesheet" href="css/index.css">
         <link rel="stylesheet" href="css/responsive.css">
-        <link href='https://fonts.googleapis.com/css?family=Permanent+Marker|Life+Savers:400,700|PT+Serif:400' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Permanent+Marker|Life+Savers:400,700|PT+Serif:400|Lato:400|Open+Sans:400|Dosis:400|Didact+Gothic:100|Jura:400|Roboto:100' rel='stylesheet' type='text/css'>
 
         <!-- Script links -->
         <script src='http://code.jquery.com/jquery-latest.min.js'></script>
@@ -78,27 +78,29 @@
                     <span class="strike_through_text">About</span>
                 </span> Me
             </h2>
-            <div class="main_image_container">
-                <div class="main_image_div">
-                    <img class="main_image blurred_image" src="img/main_pic.jpg" alt="">
-                </div>
-                <div class="real_me hidden">
-                    <p>HAHA Get It?<p>
-                    <p>Blurred...<p>
-                    <p>Bare...</p>
-                    <p>Yeah...</p>
-                </div>
+                <div class="inner_about_container">
+                    <div class="main_image_container">
+                        <div class="main_image_div">
+                            <img class="main_image blurred_image" src="img/main_pic.jpg" alt="">
+                        </div>
+                        <div class="real_me hidden">
+                            <p>HAHA Get It?<p>
+                            <p>Blurred...<p>
+                            <p>Bare...</p>
+                            <p>Yeah...</p>
+                        </div>
+                    </div>
+                    <p class="intro">Hmmm…where to start? I’m a dedicated dreamer from Baltimore, Maryland.  I’ve always had ambitions to create, probably because I have two insanely talented, creative, and artistic parents.  That passion led me to Front End Web Development, since it bridges the gap between my creative and technical skills.  What technical skills you ask…Oh…I forgot to mention that I’ve been a full-time Software Engineer since 2012.</p>
+                <!-- <p class="intro">I completed the Front End Web Development course at General Assembly in May 2016.  That was my springboard into this field and now I intend to use those skills to freelance.  My skills are constantly growing so you’re in good hands. My work, though not abundant at this point, speaks for itself, which creeped me out at first, but now I like what it has to say and I’m sure you will too. -psst- I made this site as well.</p> -->
+                <p>When I’m not coding I thoroughly enjoy:</p>
+                <ol class="hobbies_list">
+                    <li>watching anime (Luffy is my spirit animal)</li>
+                    <li>playing video games (PS4 now)</li>
+                    <li>any kind of brainteaser (2 + 2 = Golf)  </li>
+                    <li>drawing (I’m starting to do comics)</li>
+                    <li>lists comprised of five facts</li>
+                </ol>
             </div>
-            <p class="intro">Hmmm…where to start? I’m a 28 year old dreamer and have lived in Baltimore, Maryland practically my whole life.  I’ve always had ambitions to create, probably because I have two insanely talented, creative, and artistic parents.  That passion led me to Front End Web Development, since it bridges the gap between my creative and technical skills.  What technical skills you ask…Oh…I forgot to mention that I’ve been a full-time Software Engineer for the past four years.</p>
-            <p class="intro">I completed the Front End Web Development course at General Assembly in May 2016.  That was my springboard into this field and now I intend to use those skills to freelance.  My skills are constantly growing so you’re in good hands. My work, though not abundant at this point, speaks for itself, which creeped me out at first, but now I like what it has to say and I’m sure you will too. -psst- I made this site as well.</p>
-            <p>When I’m not coding I thoroughly enjoy:</p>
-            <ol class="hobbies_list">
-                <li>watching anime (Luffy is my spirit animal)</li>
-                <li>playing video games (PS4 now)</li>
-                <li>any kind of brainteaser (2 + 2 = Golf)</li>
-                <li>drawing (I’m starting to do comics)</li>
-                <li>lists comprised of five facts</li>
-            </ol>
         </div>
 
         <div class="container-fluid skills_container" id="skills">
@@ -141,107 +143,109 @@
 
         <div class="container-fluid portfolio_container" id="portfolio">
             <h2>Portfolio</h2>
-            <div class="portfolio_thumbnails_container">
-                <!-- TODO: add the read more description after each thumbnail -->
-                <!-- This is the container for the ReThree Project. -->
-                <div class="project_container">
-                    <div class="thumbnail_container rethree_image">
-                        <div class="project_skill hidden">CSS3</div>
-                        <div class="project_skill hidden">HTML5</div>
-                        <div class="project_skill hidden">JavaScript</div>
-                        <div class="project_skill hidden">Flexbox</div>
-                        <div class="project_skill hidden">Bootstrap</div>
-                        <div class="thumbnail"></div>
-                    </div>
+            <div class="inner_portfolio_container">
+                <div class="portfolio_thumbnails_container">
+                    <!-- TODO: add the read more description after each thumbnail -->
+                    <!-- This is the container for the ReThree Project. -->
+                    <div class="project_container">
+                        <div class="thumbnail_container rethree_image">
+                            <div class="project_skill hidden">CSS3</div>
+                            <div class="project_skill hidden">HTML5</div>
+                            <div class="project_skill hidden">JavaScript</div>
+                            <div class="project_skill hidden">Flexbox</div>
+                            <div class="project_skill hidden">Bootstrap</div>
+                            <div class="thumbnail"></div>
+                        </div>
 
-                    <div>
-                        <i class="fa fa-angle-double-right custom fa-2x hidden"></i>
-                        <h3 class="thumbnail_title rethree"><a href="http://brobertson3.github.io/">ReThree</a></h3>
-                        <i class="fa fa-angle-double-left custom fa-2x hidden"></i>
-                    </div>
+                        <div>
+                            <i class="fa fa-angle-double-right custom fa-2x hidden"></i>
+                            <h3 class="thumbnail_title rethree"><a href="http://brobertson3.github.io/">ReThree</a></h3>
+                            <i class="fa fa-angle-double-left custom fa-2x hidden"></i>
+                        </div>
 
-                    <p class="brief_description">ReThree is an online tool, used to educate users on the three R’s: Reducing, Reusing, and Recycling.  This was the final project for my Front End Web Development course at <a href="https://generalassemb.ly/education/front-end-web-development" target="_blank">General Assembly</a>.</p>
+                        <p class="brief_description">ReThree is an online tool, used to educate users on the three R’s: Reducing, Reusing, and Recycling.  This was the final project for my Front End Web Development course at <a href="https://generalassemb.ly/education/front-end-web-development" target="_blank">General Assembly</a>.</p>
                     <!-- TODO change the color of this on hover. -->
-                    <p id="read_more rethree_modal" data-toggle="modal" data-target="#rethree_modal"><a>Read More</a></p>
+                        <p id="read_more rethree_modal" data-toggle="modal" data-target="#rethree_modal"><a>Read More</a></p>
 
                     <!-- ReThree Modal -->
-                    <div id="rethree_modal" class="modal fade" role="dialog">
-                        <div class="modal-dialog">
+                        <div id="rethree_modal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
 
                             <!-- Modal content-->
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h4 class="modal-title">ReThree</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Technologies used: HTML5, CSS3, JavaScript, JavaScript UI, Bootstrap, FlexBox</p> 
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">ReThree</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Technologies used: HTML5, CSS3, JavaScript, JavaScript UI, Bootstrap, FlexBox</p> 
 
-                                    <p>This was my final project for my General Assembly course in May 2016.  The idea came about when I was talking to my wonderful girlfriend about a project idea.  She immediately stated that she would love if there was a website that would instruct people how to reduce, recycle, and reuse, in order to reduce waste and bolster the environment’s health.  So, being the Systems Engineer that she is, she laid out requirements for what she wanted the site to do.  She definitely will always be one of my favorite clients to work with.</p>
+                                        <p>This was my final project for my General Assembly course in May 2016.  The idea came about when I was talking to my wonderful girlfriend about a project idea.  She immediately stated that she would love if there was a website that would instruct people how to reduce, recycle, and reuse, in order to reduce waste and bolster the environment’s health.  So, being the Systems Engineer that she is, she laid out requirements for what she wanted the site to do.  She definitely will always be one of my favorite clients to work with.</p>
 
-                                    <p>The purpose of this site is to teach people how to properly reduce, recycle, and reuse their waste.  It was built primarily using Twitter Bootstrap, with the addition of FlexBox for some of the positioning.  I decided to take a less conventional approach to the navigation in the site, utilizing the JQuery UI library to achieve the drag-and-drop navigation on the main page.  I also threw in a few popover boxes for each recycling bin to let the user know what it linked to.  I decided to take the powerpoint slide approach when actually presenting the user with information.  This was achieved with Bootstrap’s carousel JS.  I also added some CSS animation to the site for kicks and giggles on the congratulations page and for the pulsing arrows on the main page.</p>
+                                        <p>The purpose of this site is to teach people how to properly reduce, recycle, and reuse their waste.  It was built primarily using Twitter Bootstrap, with the addition of FlexBox for some of the positioning.  I decided to take a less conventional approach to the navigation in the site, utilizing the JQuery UI library to achieve the drag-and-drop navigation on the main page.  I also threw in a few popover boxes for each recycling bin to let the user know what it linked to.  I decided to take the powerpoint slide approach when actually presenting the user with information.  This was achieved with Bootstrap’s carousel JS.  I also added some CSS animation to the site for kicks and giggles on the congratulations page and for the pulsing arrows on the main page.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
+
                             </div>
-
                         </div>
                     </div>
-                </div>
-                <!-- This is the container for the BareMedium Project. -->
-                <div class="project_container">
-                    <div class="thumbnail_container baremedium_image">
-                        <div class="project_skill hidden">CSS3</div>
-                        <div class="project_skill hidden">HTML5</div>
-                        <div class="project_skill hidden">JavaScript</div>
-                        <div class="project_skill hidden">Flexbox</div>
-                        <div class="project_skill hidden">Bootstrap</div>
-                        <div class="thumbnail"></div>
-                    </div>
-                    <div>
-                        <i class="fa fa-angle-double-right custom fa-2x hidden"></i>
-                        <h3 class="thumbnail_title baremedium">BareMedium</h3>
-                        <i class="fa fa-angle-double-left custom fa-2x hidden"></i>
-                    </div>
-                    <p class="brief_description">Well this should look familiar.  This is my portfolio project where I display some of my work, as well as tell you a little about myself.  I also freelance, so if you like what you see then <a href="#contact_me">contact me</a> below.</p>
-                    <p id="read_more baremedium_modal" data-toggle="modal" data-target="#baremedium_modal"><a>Read More</a></p>
+                    <!-- This is the container for the BareMedium Project. -->
+                    <div class="project_container">
+                        <div class="thumbnail_container baremedium_image">
+                            <div class="project_skill hidden">CSS3</div>
+                            <div class="project_skill hidden">HTML5</div>
+                            <div class="project_skill hidden">JavaScript</div>
+                            <div class="project_skill hidden">Flexbox</div>
+                            <div class="project_skill hidden">Bootstrap</div>
+                            <div class="thumbnail"></div>
+                        </div>
+                        <div>
+                            <i class="fa fa-angle-double-right custom fa-2x hidden"></i>
+                            <h3 class="thumbnail_title baremedium">BareMedium</h3>
+                            <i class="fa fa-angle-double-left custom fa-2x hidden"></i>
+                        </div>
+                        <p class="brief_description">Well this should look familiar.  This is my portfolio project where I display some of my work, as well as tell you a little about myself.  I also freelance, so if you like what you see then <a href="#contact_me">contact me</a> below.</p>
+                        <p id="read_more baremedium_modal" data-toggle="modal" data-target="#baremedium_modal"><a>Read More</a></p>
 
-                    <!-- BareMedium Modal -->
-                    <div id="baremedium_modal" class="modal fade" role="dialog">
-                        <div class="modal-dialog">
+                        <!-- BareMedium Modal -->
+                        <div id="baremedium_modal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
 
-                            <!-- Modal content-->
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h4 class="modal-title">BareMedium</h4>
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">BareMedium</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Technologies used: HTML5, CSS3, JQuery, Bootstrap, FlexBox, Adobe Illustrator</p>
+
+                                        <p>This project was a no brainer.  I’m a developer and creator, so I needed to develop and create a portfolio site to showcase what I’ve developed and created.  More specifically, I wanted to display my work for potential clients, while also giving them a glimpse of the individual they would be working with.</p>
+
+                                        <p>This was built with Twitter Bootstrap, namely the navigation bar, buttons, and the very modal that you’re reading now.  I made a custom border for each section on the page with Illustrator, which I thought was pretty cool since that’s the first time I’ve attempted it.  The blurred picture hover effect was accomplished through custom JQuery.  The same is true for the portfolio thumbnail hover effect.  All of the icons in the “Contact Me” section are courtesy of the folks at <a href="http://fontawesome.io/" target="_blank">Font Awesome</a>.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
                                 </div>
-                                <div class="modal-body">
-                                    <p>Technologies used: HTML5, CSS3, JQuery, Bootstrap, FlexBox, Adobe Illustrator</p>
 
-                                    <p>This project was a no brainer.  I’m a developer and creator, so I needed to develop and create a portfolio site to showcase what I’ve developed and created.  More specifically, I wanted to display my work for potential clients, while also giving them a glimpse of the individual they would be working with.</p>
-
-                                    <p>This was built with Twitter Bootstrap, namely the navigation bar, buttons, and the very modal that you’re reading now.  I made a custom border for each section on the page with Illustrator, which I thought was pretty cool since that’s the first time I’ve attempted it.  The blurred picture hover effect was accomplished through custom JQuery.  The same is true for the portfolio thumbnail hover effect.  All of the icons in the “Contact Me” section are courtesy of the folks at <a href="http://fontawesome.io/" target="_blank">Font Awesome</a>.</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
                             </div>
-
                         </div>
                     </div>
-                </div>
-                <!-- This is the container for the Upcoming Chewzer Project. -->
-                <div class="project_container">
-                    <div class="thumbnail_container dashed_border coming_soon">
-                        <div class="thumbnail">
-                            <p>Coming Soon!</p>
+                    <!-- This is the container for the Upcoming Chewzer Project. -->
+                    <div class="project_container">
+                        <div class="thumbnail_container dashed_border coming_soon">
+                            <div class="thumbnail">
+                                <p>Coming Soon!</p>
+                            </div>
                         </div>
+                        <h3>Chewzer</h3>
+                        <p class="brief_description">Chewzer is a collaborative project that I'm working on with the talented <a href="https://lindsayboylan.com/" target="_blank">Lindsay Boylan</a>.  This project suggests weekly meals based on your dietary restrictions and nutritional targets.</p>
+                        <p id="read_more"><a>Read More</a></p>
                     </div>
-                    <h3>Chewzer</h3>
-                    <p class="brief_description">Chewzer is a collaborative project that I'm working on with the talented <a href="https://lindsayboylan.com/" target="_blank">Lindsay Boylan</a>.  This project suggests weekly meals based on your dietary restrictions and nutritional targets.</p>
-                    <p id="read_more"><a>Read More</a></p>
                 </div>
             </div>
         </div>
@@ -250,25 +254,27 @@
             <h2>Contact Me</h2>
             <p id="contact_greeting">Drop me a note below if you would like me to work on a project...or just to chat!</p>
             <div class="row">
-                <!-- Small screen I want each to take up entire width.
-                Medium and up it can go side by side. -->
-                <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 contact_form">
-                    <form action="mailto:brent.robertson3@gmail.com" enctype="text/plain" method="post" id="contact_form">
-                        <div class="form-group">
-                            <label for="inputName">Name:</label>
-                            <input type="text" class="form-control" name="Name" id="inputName" placeholder="Full Name">
+                <div class="inner_contact_container">
+                    <!-- Small screen I want each to take up entire width.
+                    Medium and up it can go side by side. -->
+                    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 contact_form">
+                        <form action="mailto:brent.robertson3@gmail.com" enctype="text/plain" method="post" id="contact_form">
+                            <div class="form-group">
+                                <label for="inputName">Name:</label>
+                                <input type="text" class="form-control" name="Name" id="inputName" placeholder="Full Name">
                             <!-- <input name="Name" type="text" id="Name" size="40"> -->
-                        </div>
-                        <div class="form-group">
-                            <label for="inputEmail">Email:</label>
-                            <input type="email" class="form-control" name="Email" id="inputEmail" placeholder="Email">
-                        </div>
-                        <div class="form-group">
-                            <label for="inputMessage">Message:</label>
-                            <textarea rows="10" class="form-control" id="inputMessage" name="Message" placeholder="Speak to me..."></textarea>
-                        </div>
-                        <button type="submit" id="contact_submit" value="Submit" class="btn btn-primary">Submit</button>
-                    </form>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail">Email:</label>
+                                <input type="email" class="form-control" name="Email" id="inputEmail" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputMessage">Message:</label>
+                                <textarea rows="10" class="form-control" id="inputMessage" name="Message" placeholder="Speak to me..."></textarea>
+                            </div>
+                            <button type="submit" id="contact_submit" value="Submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
                 </div>
                 <!-- Offset one for medium to provide spacing between form and links -->
                 <div class="col-xs-12 contact_links">
