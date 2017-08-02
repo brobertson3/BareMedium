@@ -266,12 +266,10 @@ $(document).ready(function () {
 				youShallNotRun = true;
 				runOnce = true;
 				$(this).find('.skill_banner').addClass('css_trick');
-				$("#blackout").addClass('blackout');
 				setTimeout(function() {
-					$("#blackout").removeClass('blackout');
 					$(this).find('.skill_banner').removeClass('css_trick');
 					youShallNotRun = false;
-				}, 6000);
+				}, 2000);
 			} else {
 				$('#css').popover({
 					content: "Sorry, I only have enough chakra do that trick once.",
@@ -426,23 +424,23 @@ var move;
 			$('#wordpress').popover("destroy");
 		}, 2500);
 	
-		setTimeout(function() {
-			// $('#popover_wordpress').popover("destroy");
-			$('#wordpress').popover({
-				content: "Luckily, I can fix it!",
-				placement: "top"
-			});
-			$('#wordpress').popover("show");
-		}, 3000);
+		// setTimeout(function() {
+		// 	// $('#popover_wordpress').popover("destroy");
+		// 	$('#wordpress').popover({
+		// 		content: "Luckily, I can fix it!",
+		// 		placement: "top"
+		// 	});
+		// 	$('#wordpress').popover("show");
+		// }, 3000);
 
-		setTimeout(function() {
-			$('#wordpress').popover("destroy");
-		}, 5000);
+		// setTimeout(function() {
+		// 	$('#wordpress').popover("destroy");
+		// }, 5000);
 	
 		setTimeout(function() {
 			// $('#popover_wordpress').popover("destroy");
 			$('#wordpress').popover({
-				content: "Do you want me to?",
+				content: "Do you want me to bring it back?",
 				placement: "top",
 				template: '<div class="popover"><div class="arrow"></div>' + 
 				      '<div class="popover-content"></div>' +
@@ -453,7 +451,7 @@ var move;
 				      '</div>',
 			});
 			$('#wordpress').popover("show");
-		}, 5500);
+		}, 3000);
 	}
 
 	$('body').on("click", "#confirm_wordpress", javascript_animation);
