@@ -2,7 +2,7 @@ $(document).ready(function () {
 
 	// Initially check browser width for sizing of contact links
 	checkBrowserWidth();
-
+	contactSlideEffect();
 	/* On hover - remove the hidden class and blurred_image to show the 'The Real Me' 
 	   text and clear profile picture. */
 	$('.main_image_div').hover(function () {
@@ -93,6 +93,15 @@ $(document).ready(function () {
 		$(this)[2].reset();
 	});
 
+	function contactSlideEffect() {
+		$('.contact_links ul a').css('opacity', 0);
+		$('#facebook').css({right: 1000 + "px"});
+		$('#linkedin').css({right: 1000 + "px"});
+		$('#twitter').css({right: 1000 + "px"});
+		$('#tumblr').css({right: 1000 + "px"});
+		$('#github').css({right: 1000 + "px"});
+	}
+
 	$(window).on('scroll', function () {
     	var scrollTop        = $(window).scrollTop(),     // Number of pixels hidden from view above scrollable area
         	skillsOffset     = $('#skills').offset().top, // Current coordinates of element from top of document
@@ -101,6 +110,7 @@ $(document).ready(function () {
         	portfolioOffset  = $('#portfolio').offset().top,
         	contactOffset    = $('#contact_me').offset().top,
         	windowHeight     = $(window).height(),        // Height of the current viewable window
+        	documentHeight   = $(document).height(), // Height of the entire document
         	skillsHeight     = $('.inner_skills_container').height(),  // Height of the element
         	aboutHeight      = $('.inner_about_container').height(),
         	portfolioHeight  = $('.inner_portfolio_container').height(),
@@ -113,8 +123,13 @@ $(document).ready(function () {
         	homeDistanceTop         = homeOffset - scrollTop - 20,
         	aboutDistanceTop        = aboutOffset - scrollTop - 20,
         	portfolioDistanceTop    = portfolioOffset - scrollTop - 20,
-        	contactDistanceTop      = contactOffset - scrollTop - 20;
-
+        	contactDistanceTop      = contactOffset - scrollTop - 20,
+        	isBottom                = function() {
+        		if ((windowHeight + scrollTop) >= documentHeight - 70)
+        			return true;
+        		else 
+        			false;
+        	};
         
         // console.log(contactOffset);
         // console.log(contactDistanceTop);
@@ -137,6 +152,27 @@ $(document).ready(function () {
 
         if (contactDistanceBottom >= 0) {
         	$('.inner_contact_container').addClass('fade_in');
+        }
+
+        if (isBottom()) {
+        	$('.contact_links ul a').css('opacity', 1);
+        	$('#facebook').animate({right: 0 + "px"});
+
+        	setTimeout(function() {
+        		$('#linkedin').animate({right: 0 + "px"});	
+        	}, 175);
+
+        	setTimeout(function() {
+        		$('#twitter').animate({right: 0 + "px"});	
+        	}, 350);
+
+        	setTimeout(function() {
+        		$('#tumblr').animate({right: 0 + "px"});	
+        	}, 525);
+
+        	setTimeout(function() {
+        		$('#github').animate({right: 0 + "px"});	
+        	}, 700);
         }
 
         if (homeDistanceTop <= 0 && aboutDistanceTop >= 0) {
@@ -174,6 +210,7 @@ $(document).ready(function () {
 		if(!youShallNotRun) {
 			// var original = $(this).find('.skill_banner').text();
 			$(this).css('cursor', 'pointer');
+			// $(this).css({backgroundColor: "red"});
 			// console.log("this is the original:" + original);
 			// $(this).data('original', original);
 			// setTimeout(function() {
@@ -187,6 +224,7 @@ $(document).ready(function () {
 	}, function(event) {
 		if(!youShallNotRun) {	
 			// $(this).find('.skill_banner').text($(this).data('original'));
+			$(this).css({backgroundColor: "inherit"});
 		}
 	});
 
@@ -227,11 +265,11 @@ $(document).ready(function () {
 				$('#' + skillsList.second).text("CSS3");
 				youShallNotRun = true;
 				runOnce = true;
-				$("#blackout").addClass('blackout');
 				$(this).find('.skill_banner').addClass('css_trick');
+				$("#blackout").addClass('blackout');
 				setTimeout(function() {
-				$("#blackout").removeClass('blackout');
-				$(this).find('.skill_banner').removeClass('css_trick');
+					$("#blackout").removeClass('blackout');
+					$(this).find('.skill_banner').removeClass('css_trick');
 					youShallNotRun = false;
 				}, 6000);
 			} else {
@@ -245,7 +283,7 @@ $(document).ready(function () {
 
 				setTimeout(function() {
 					$('#css').popover("destroy");
-				}, 3200);
+				}, 2200);
 			}
 			
 
@@ -442,8 +480,6 @@ var move;
 			$('#wordpress').popover("destroy");
 			javascript_animation();
 		}, 2500);
-
-		// $('#popover_wordpress').popover("destroy");
 
 	});
 

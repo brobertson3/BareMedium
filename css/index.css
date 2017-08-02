@@ -1,7 +1,7 @@
 /*********************** All the sections ***********************/
 body {
-	font-family: 'Didact Gotham', sans-serif;
-	font-weight: 100;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
 	text-align: center;
 	min-width: 300px;
 }
@@ -278,13 +278,13 @@ img.logo {
 	margin-right: 0;
 	margin-left: 0;
 	opacity: 0;
-	/*position: relative;*/
+	position: relative;
 }
 
 .fade_in {
 	animation-name: fade_in_content;
 	animation-timing-function: linear;
-	animation-duration: 3s;
+	animation-duration: 1.5s;
 	animation-fill-mode: forwards;
 }
 
@@ -301,7 +301,7 @@ img.logo {
     background: rgb(0,0,0);
     opacity: 0;
     z-index: 100;
-	animation-name: fade_in_content;
+	animation-name: fade_in_darkness;
 	animation-timing-function: linear;
 	animation-duration: 5s;
 }
@@ -310,23 +310,25 @@ img.logo {
 	animation-name: css_magic;
 	animation-timing-function: linear;
 	animation-duration: 5s;
-	position: relative;
+	/*position: relative;*/
 	opacity: 1;
-	z-index: 101;
+	z-index: 201;
+}
+
+@keyframes fade_in_darkness {
+	0% { opacity: 0; }
+	50% { opacity: 1; }
 }
 
 @keyframes fade_in_content {
 	0% { opacity: 0; }
-	100% { opacity: 1; }/*
-	100% { opacity: 1; }*/
+	100% { opacity: 1; }
 }
 
 @keyframes css_magic {
 	0% { font-size: inherit;
 		 color: inherit; }
-	37% {
-		color: #fff;
-	}
+	37% { color: #fff; }
 	50% { font-size: 3.7em; 
 		  color: #fff; }
 	/*100% { font-size: 3.7em;
@@ -587,6 +589,9 @@ div.thumbnail p{
 
 .contact_links {
 	margin: 0 auto;
+	padding-top: 30px;
+	/*opacity: 0;*/
+	/*position: relative;*/
 }
 
 .contact_links i {
@@ -598,6 +603,7 @@ div.thumbnail p{
 .contact_links ul{
 	list-style-type: none;
 	padding-left: 0;
+	text-align: center;
 }
 
 .contact_links li {
@@ -605,16 +611,14 @@ div.thumbnail p{
 	margin: 0 1%;
 }
 
-.contact_links {
+/*.contact_links {
 	padding-top: 30px;
-}
+}*/
 
 .contact_links a {
 	text-decoration: none;
-}
-
-.contact_links ul {
-	text-align: center;
+	position: relative;
+	opacity: 0;
 }
 
 #contact_submit {
