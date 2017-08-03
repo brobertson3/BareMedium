@@ -1,6 +1,6 @@
 /*********************** All the sections ***********************/
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
 	text-align: center;
 	min-width: 300px;
@@ -8,7 +8,7 @@ body {
 
 body p, ol li {
 	font-size: 1.5rem;
-	letter-spacing: 0.7px;
+	letter-spacing: 0.3px;
 }
 
 #contact_thanks {
@@ -23,7 +23,7 @@ h1, h2, h3 {
 	text-align: center;
 }
 
-h2 {
+h2, h4 {
 	font-size: 3rem;
 }
 
@@ -89,7 +89,7 @@ img.logo {
 }
 
 .home_container p {
-	font-weight: bold;
+	font-weight: 800;
 	color: rgb(196, 0, 16);
 }
 
@@ -184,20 +184,12 @@ img.logo {
 
 /************************ Skills section ************************/
 
-.skills_container {
-	/*color: #fff;
-	background-color: #222;*/
-	/*position: relative;*/
-}
-.skills_outer {
-
-}
-
 .skill_shell {
 	width: 50%;
 	display: inline;
 	float: left;
-	margin: 20px auto;
+	margin: 40px auto;
+	font-weight: 400;
 	/*-webkit-backface-visibility: hidden;*/
 	/*position: absolute;*/
 }
@@ -205,21 +197,10 @@ img.logo {
 .border_skill {
 	border-radius: 50%;
 	border: 2px solid rgb(32, 72, 149);
-	height: 75px;
-	width: 75px;
+	height: 125px;
+	width: 125px;
 	margin: 0 auto;
 	/*position: relative;*/
-}
-
-#java {
-	/*display: inline;*/
-	/*position: absolute;*/
-	/*right: 8px;*/
-	/*animation-name: rotate_java;
-	animation-timing-function: linear;
-	animation-duration: 5s;*/
-	/*transform: rotate(120deg);*/
-	/*-webkit-transform: rotate(120deg);*/
 }
 
 .spin {
@@ -233,26 +214,9 @@ img.logo {
 	animation-name: blink_life;
 	animation-timing-function: linear;
 	animation-duration: 0.7s;
-	/*animation-fill-mode: forwards;*/
-}
-
-/*.extra_life {
-	opacity: 1;
-}*/
-
-#script {
-	/*display: inline;*/
-	/*position: absolute;*/
-	/*left: -8px;*/
 }
 
 @keyframes blink_life {
-	/*0% { transform: rotate(90deg);
-		 font-size: 21px; }
-	100% { transform: rotate(180deg); }*/
-	/*0% { opacity: 1; }*/
-	/*50% { opacity: 0; } */
-	/*0% { opacity: 0; } */
 	4% { opacity: 0; } 
 	16% { opacity: 1; } 
 	32% { opacity: 0; } 
@@ -267,7 +231,8 @@ img.logo {
 }
 
 .skill_banner {
-	line-height: 75px;
+	line-height: 125px;
+	font-size: 1.2em;
 	/*position: absolute;*/
 	/*transform: translateX(-50%);*/
 	/*left: 50%;*/
@@ -356,36 +321,42 @@ img.logo {
 	100% { opacity: 1; }
 }
 
-@keyframes css_magic {
+/*@keyframes css_magic {
 	0% { font-size: inherit;
 		 color: inherit; }
 	37% { color: #fff; }
 	50% { font-size: 3.7em; 
-		  color: #fff; }
+		  color: #fff; }*/
 	/*100% { font-size: 3.7em;
 		   color: #fff; }*/
 
-}
+/*}*/
 
-.popover-content {
+/*.popover-content {
 	font-size: 1.5rem;
-}
+}*/
 
 .popover-footer {
 	text-align: center;
 }
 
 .wordpress_button {
-	width: ;
+	width: 50px;
+	margin-bottom: 5px;
+	margin-left: 2px;
+}
+
+#confirm_wordpress {
+	/*margin-right: px;*/
 }
 
 .popover {
-	width: 200px;
-	font-size: 1.5em;
+	width: 125px;
+	font-size: 1.4rem;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	text-align: center;
 }
-
-
-
 
 /*@keyframes blackout_content {
 	from { background-color: inherit;
@@ -475,6 +446,18 @@ img.logo {
 
 h4.modal-title {
 	font-family: 'Permanent Marker', sans-serif;
+}
+
+/* Make sure that the modal isn't longer than the screen.  
+   If so, then it becomes scrollable. */
+.modal-body {
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
+}
+
+.bold_tech {
+	font-weight: 700;
+	color: rgb(196, 0, 16);
 }
 
 .portfolio_thumbnails_container {

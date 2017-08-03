@@ -12,11 +12,16 @@
         <link rel="stylesheet" type="text/css" href="fa/font-awesome.min.css">
         <link rel="stylesheet" href="css/index.css">
         <link rel="stylesheet" href="css/responsive.css">
-        <link href='https://fonts.googleapis.com/css?family=Permanent+Marker|Life+Savers:400,700|PT+Serif:400|Lato:400|Open+Sans:400|Dosis:400|Didact+Gothic:100|Jura:400|Roboto:100' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Permanent+Marker|Life+Savers:400,700|PT+Sans:100,400,700|Lato:400|Open+Sans:100,400,700|Dosis:400|Didact+Gothic:100|Jura:400|Roboto:100,400,700' rel='stylesheet' type='text/css'>
 
         <!-- Script links -->
         <script src='http://code.jquery.com/jquery-latest.min.js'></script>
         <script type="text/javascript" src="bootstrap/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(function () { 
+                $("#rethree_modal").modal({show:false});
+            });  
+        </script>
     </head>
 
     <body>
@@ -142,6 +147,56 @@
         </div>
 
         <div class="container-fluid portfolio_container" id="portfolio">
+            <!-- ReThree Modal -->
+            <div id="rethree_modal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;    </button>
+                            <h4 class="modal-title">ReThree</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Technologies used: <span class="bold_tech">HTML5, CSS3, JavaScript, JavaScript UI, Bootstrap, FlexBox</span></p> 
+    
+                            <p>This was my final project for my General Assembly course in May 2016.  The idea came about when I was talking to my wonderful girlfriend about a project idea.  She immediately stated that she would love if there was a website that would instruct people how to reduce, recycle, and reuse, in order to reduce waste and bolster the environment’s health.  So, being the Systems Engineer that she is, she laid out requirements for what she wanted the site to do.  She definitely will always be one of my favorite clients to work with.</p>
+
+                            <p>The purpose of this site is to teach people how to properly reduce, recycle, and reuse their waste.  It was built primarily using Twitter Bootstrap, with the addition of FlexBox for some of the positioning.  I decided to take a less conventional approach to the navigation in the site, utilizing the JQuery UI library to achieve the drag-and-drop navigation on the main page.  I also threw in a few popover boxes for each recycling bin to let the user know what it linked to.  I decided to take the powerpoint slide approach when actually presenting the user with information.  This was achieved with Bootstrap’s carousel JS.  I also added some CSS animation to the site for kicks and giggles on the congratulations page and for the pulsing arrows on the main page.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- BareMedium Modal -->
+            <div id="baremedium_modal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">BareMedium</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Technologies used: <span class="bold_tech">HTML5, CSS3, JQuery, Bootstrap, FlexBox, Adobe Illustrator</span></p>
+
+                            <p>This project was a no brainer.  I’m a developer and creator, so I needed to develop and create a portfolio site to showcase what I’ve developed and created.  More specifically, I wanted to display my work for potential clients, while also giving them a glimpse of the individual they would be working with.</p>
+
+                            <p>This was built with Twitter Bootstrap, namely the navigation bar, buttons, and the very modal that you’re reading now.  I made a custom border for each section on the page with Illustrator, which I thought was pretty cool since that’s the first time I’ve attempted it.  The blurred picture hover effect was accomplished through custom JQuery.  The same is true for the portfolio thumbnail hover effect.  All of the icons in the “Contact Me” section are courtesy of the folks at <a href="http://fontawesome.io/" target="_blank">Font Awesome</a>.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
             <h2>Portfolio</h2>
             <div class="inner_portfolio_container">
                 <div class="portfolio_thumbnails_container">
@@ -166,32 +221,8 @@
                         <p class="brief_description">ReThree is an online tool, used to educate users on the three R’s: Reducing, Reusing, and Recycling.  This was the final project for my Front End Web Development course at <a href="https://generalassemb.ly/education/front-end-web-development" target="_blank">General Assembly</a>.</p>
                     <!-- TODO change the color of this on hover. -->
                         <p id="read_more rethree_modal" data-toggle="modal" data-target="#rethree_modal"><a>Read More</a></p>
-
-                    <!-- ReThree Modal -->
-                        <div id="rethree_modal" class="modal fade" role="dialog">
-                            <div class="modal-dialog">
-
-                            <!-- Modal content-->
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title">ReThree</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>Technologies used: HTML5, CSS3, JavaScript, JavaScript UI, Bootstrap, FlexBox</p> 
-
-                                        <p>This was my final project for my General Assembly course in May 2016.  The idea came about when I was talking to my wonderful girlfriend about a project idea.  She immediately stated that she would love if there was a website that would instruct people how to reduce, recycle, and reuse, in order to reduce waste and bolster the environment’s health.  So, being the Systems Engineer that she is, she laid out requirements for what she wanted the site to do.  She definitely will always be one of my favorite clients to work with.</p>
-
-                                        <p>The purpose of this site is to teach people how to properly reduce, recycle, and reuse their waste.  It was built primarily using Twitter Bootstrap, with the addition of FlexBox for some of the positioning.  I decided to take a less conventional approach to the navigation in the site, utilizing the JQuery UI library to achieve the drag-and-drop navigation on the main page.  I also threw in a few popover boxes for each recycling bin to let the user know what it linked to.  I decided to take the powerpoint slide approach when actually presenting the user with information.  This was achieved with Bootstrap’s carousel JS.  I also added some CSS animation to the site for kicks and giggles on the congratulations page and for the pulsing arrows on the main page.</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
                     </div>
+
                     <!-- This is the container for the BareMedium Project. -->
                     <div class="project_container">
                         <div class="thumbnail_container baremedium_image">
@@ -209,32 +240,8 @@
                         </div>
                         <p class="brief_description">Well this should look familiar.  This is my portfolio project where I display some of my work, as well as tell you a little about myself.  I also freelance, so if you like what you see then <a href="#contact_me">contact me</a> below.</p>
                         <p id="read_more baremedium_modal" data-toggle="modal" data-target="#baremedium_modal"><a>Read More</a></p>
-
-                        <!-- BareMedium Modal -->
-                        <div id="baremedium_modal" class="modal fade" role="dialog">
-                            <div class="modal-dialog">
-
-                                <!-- Modal content-->
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title">BareMedium</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>Technologies used: HTML5, CSS3, JQuery, Bootstrap, FlexBox, Adobe Illustrator</p>
-
-                                        <p>This project was a no brainer.  I’m a developer and creator, so I needed to develop and create a portfolio site to showcase what I’ve developed and created.  More specifically, I wanted to display my work for potential clients, while also giving them a glimpse of the individual they would be working with.</p>
-
-                                        <p>This was built with Twitter Bootstrap, namely the navigation bar, buttons, and the very modal that you’re reading now.  I made a custom border for each section on the page with Illustrator, which I thought was pretty cool since that’s the first time I’ve attempted it.  The blurred picture hover effect was accomplished through custom JQuery.  The same is true for the portfolio thumbnail hover effect.  All of the icons in the “Contact Me” section are courtesy of the folks at <a href="http://fontawesome.io/" target="_blank">Font Awesome</a>.</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
                     </div>
+
                     <!-- This is the container for the Upcoming Chewzer Project. -->
                     <div class="project_container">
                         <div class="thumbnail_container dashed_border coming_soon">

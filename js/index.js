@@ -227,7 +227,7 @@ $(document).ready(function () {
 			$(this).css({backgroundColor: "inherit"});
 		}
 	});
-
+var animation_target;
 	$('.border_skill').click(function(event) {
 		// var x;
 		// for (x in skillList) {
@@ -308,9 +308,15 @@ $(document).ready(function () {
 			console.log(move);
 
 			$(this).animate({top: move + 'px'}, "slow", function() {
+				
 				$(this).find('#javascript').addClass('spin');
 				setTimeout(function() {
-					wordpress_animation();
+					if ($(window).width() >= 590) {
+						animation_target = "#wordpress";
+					} else {
+						animation_target = "#flexbox";
+					}
+					wordpress_animation(animation_target);
 				}, 700);
 				// $(this).find('#javascript').animate({opacity: "1"}, 0);
 			});
@@ -359,8 +365,8 @@ $(document).ready(function () {
 var move;
 	function javascript_animation() {
 		// 1. Remove popover from the screen.
-		$('#wordpress').popover("destroy");
-
+		$(animation_target).popover("destroy");
+		var animation_size = $('#popover_wordpress').height() - 40;
 		// 2. Move the JavaScript circle back to it's original place on the page (still hidden)
 		// $('#javascript').parent().animate({top: 0, width: 100 + "px"}, 1000, function() {
 			// This will be changed..right now just showing that the circle is where it should be
@@ -392,7 +398,7 @@ var move;
 		$('#javascript').html('<img id="extra_life_image" src="img/ExtraLife.svg" height="10" width="10">');
 
 		$('#javascript').parent().animate({top: 0}, 1000);
-		$('#extra_life_image').animate({width: 100 + "px", height: 100 + "px"}, 1000);
+		$('#extra_life_image').animate({width: animation_size + "px", height: animation_size + "px"}, 1000);
 		
 		
 			$('#javascript').removeClass('spin');
@@ -411,17 +417,19 @@ var move;
 			}, 2200);
 	}
 
+
+
 	function wordpress_animation() {
-		$('#wordpress').popover({
+		$(animation_target).popover({
 			content: "Hey, looks like your code broke!",
 			placement: "top"
 		});
 		setTimeout(function() {
-			$('#wordpress').popover("show");
+			$(animation_target).popover("show");
 		}, 500);
 
 		setTimeout(function() {
-			$('#wordpress').popover("destroy");
+			$(animation_target).popover("destroy");
 		}, 2500);
 	
 		// setTimeout(function() {
@@ -439,7 +447,7 @@ var move;
 	
 		setTimeout(function() {
 			// $('#popover_wordpress').popover("destroy");
-			$('#wordpress').popover({
+			$(animation_target).popover({
 				content: "Do you want me to bring it back?",
 				placement: "top",
 				template: '<div class="popover"><div class="arrow"></div>' + 
@@ -450,7 +458,7 @@ var move;
 				      '<i class="fa fa-fw fa-times"></i></button>&nbsp;'+
 				      '</div>',
 			});
-			$('#wordpress').popover("show");
+			$(animation_target).popover("show");
 		}, 3000);
 	}
 
@@ -462,21 +470,21 @@ var move;
 		/*
 		 *  TODO: 1. Popover that says "Well, I'll do it anyway"
 		 */
-		$('#wordpress').popover("destroy");
+		$(animation_target).popover("destroy");
 		
 		setTimeout(function() {
-			$('#wordpress').popover({
+			$(animation_target).popover({
 				content: "Sorry, I can't let a good skill go to waste.",
 				placement: "top",	
 			});
 
-			$('#wordpress').popover("show");
+			$(animation_target).popover("show");
 		}, 500);
 		
 
 		setTimeout(function() {
-			$('#wordpress').popover("destroy");
-			javascript_animation();
+			$(animation_target).popover("destroy");
+			javascript_animation(animation_target);
 		}, 2500);
 
 	});
