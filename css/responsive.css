@@ -30,15 +30,17 @@
 	}
 
 	i.fa.floating {
-		color: rgba(196, 0, 16, 0.15);
+		color: rgb(196, 0, 16);
 		position: fixed;
 		display: inline-block;
+		opacity: 0.15;
 	}
 
 	i.fa.floating:nth-child(2n) {
 		color: #3967B1;
-		opacity: 0.15;
 	}
+
+
 
 	/*** Portfolio Work ***/
 	/*.thumbnail_container {

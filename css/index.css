@@ -192,6 +192,33 @@ img.logo {
 	border-radius: 200px;
 }
 
+.clear_image {
+	animation-name: unblur;
+	animation-timing-function: linear;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes unblur{
+	from {
+		filter: blur(20px);
+		/* Browser Specific */
+		-webkit-filter: blur(20px);
+		-moz-filter: blur(20px);
+		-o-filter: blur(20px);
+		-ms-filter: blur(20px);
+	}
+
+	to {
+		filter: blur(0px);
+		/* Browser Specific */
+		-webkit-filter: blur(0px);
+		-moz-filter: blur(0px);
+		-o-filter: blur(0px);
+		-ms-filter: blur(0px);
+	}
+}
+
 .blurred_image {
 	filter: blur(20px);
 	/* Browser Specific */

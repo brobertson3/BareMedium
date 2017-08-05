@@ -6,10 +6,14 @@ $(document).ready(function () {
 	/* On hover - remove the hidden class and blurred_image to show the 'The Real Me' 
 	   text and clear profile picture. */
 	$('.main_image_div').hover(function () {
-		$('.main_image').removeClass('blurred_image');
-		$('.real_me').removeClass('hidden');
+		// $('.main_image').removeClass('blurred_image');
+		$('.main_image').addClass('clear_image');
+		setTimeout(function() {
+			$('.real_me').removeClass('hidden');
+		}, 700);
 	}, function () {
-		$('.main_image').addClass('blurred_image');
+		// $('.main_image').addClass('blurred_image');
+		$('.main_image').removeClass('clear_image');
 		$('.real_me').addClass('hidden');
 	});
 
