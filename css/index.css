@@ -52,6 +52,46 @@ a {
 	border: none;
 }
 
+/* Background floating images */
+i.fa.floating {
+	display: none;
+}
+
+i.fa-pencil {
+	top: 100px;
+	left: 10%;
+}
+
+i.fa-wifi {
+	top: 340px;
+	left: 67%;
+}
+
+i.fa-i-cursor {
+	top: 150px;
+	left: 87%;
+}
+
+i.fa-code {
+	top: 540px;
+	left: 14%;
+}
+
+i.fa-headphones {
+	top: 275px;
+	left: 37%;
+}
+
+i.fa-laptop {
+	top: 542px;
+	left: 85%;
+}
+
+i.fa-sitemap {
+	top: 593px;
+	left: 53%;
+}
+
 /********************** Navigation section **********************/
 .navbar {
 	margin-bottom: 0;
