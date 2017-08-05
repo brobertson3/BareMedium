@@ -48,17 +48,17 @@ $(document).ready(function () {
 		$(this).parent().children('.thumbnail').css('backgroundColor', 'transparent');
 	});
 
-	/* Change the size and color of the icons on hover. */
-	$('.fa.fa-fw').hover(function () {
-		// $(this).removeClass('fa-2x');
-		// $(this).addClass('fa-4x');
-		$(this).css("color", "rgb(196, 0, 16)");
-	}, function () {
-		// $(this).removeClass('fa-4x');
-		// $(this).addClass('fa-2x');
-		$(this).css("color", "inherit");
+	// /* Change the size and color of the icons on hover. */
+	// $('.fa.fa-fw').hover(function () {
+	// 	// $(this).removeClass('fa-2x');
+	// 	// $(this).addClass('fa-4x');
+	// 	$(this).css("color", "rgb(196, 0, 16)");
+	// }, function () {
+	// 	// $(this).removeClass('fa-4x');
+	// 	// $(this).addClass('fa-2x');
+	// 	$(this).css("color", "inherit");
 
-	});
+	// });
 
 	function checkBrowserWidth() {
 		if ($(window).width() >= 768) {

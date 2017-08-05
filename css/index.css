@@ -47,6 +47,11 @@ a {
 	opacity: 0;
 }
 
+.btn.btn-primary {
+	background-color: #3967B1;
+	border: none;
+}
+
 /********************** Navigation section **********************/
 .navbar {
 	margin-bottom: 0;
@@ -59,7 +64,7 @@ a {
 }
 
 .navbar-inverse .navbar-nav > li:nth-child(2n).active > a, .navbar-inverse .navbar-nav > li:nth-child(2n).active > a:focus, .navbar-inverse .navbar-nav > li:nth-child(2n).active > a:hover {
-	background-color: rgb(32, 72, 149);
+	background-color: #3967B1;
 }
 
 .navbar-fixed-top {
@@ -94,8 +99,8 @@ img.logo {
 }
 
 .bg_home {
-	background: #000000;
-	color: white; 
+	/*background: #000000;*/
+	/*color: white; */
 	/*background: url('http://thumb9.shutterstock.com/display_pic_with_logo/253597/236404216/stock-photo-programming-code-abstract-screen-of-software-developer-computer-script-blue-background-color-236404216.jpg') center center no-repeat fixed; */
 	/*background: url('../img/screenshot_code.png') center center no-repeat fixed;*/
 	/*background-size: cover;
@@ -196,7 +201,7 @@ img.logo {
 
 .border_skill {
 	border-radius: 50%;
-	border: 2px solid rgb(32, 72, 149);
+	border: 2px solid #3967B1;
 	height: 125px;
 	width: 125px;
 	margin: 0 auto;
@@ -492,6 +497,12 @@ h4.modal-title {
 
 #read_more {
 	text-align: center;
+	color: #3967B1;
+}
+
+a.read_more_hover:hover {
+	text-decoration: none;
+	color: rgb(196, 0, 16);;
 }
 
 .thumbnail_container {
@@ -644,6 +655,19 @@ div.thumbnail p{
 
 #contact_submit {
 	margin-top: 10px;
+}
+
+#contact_submit:hover {
+	background-color: rgb(196, 0, 16);
+}
+
+.fa.fa-fw {
+	color: #3967B1;
+}
+
+.fa.fa-fw:hover {
+	color: rgb(196, 0, 16);
+	border-color: rgb(196, 0, 16);
 }
 
 /********************** Footer section **********************/
