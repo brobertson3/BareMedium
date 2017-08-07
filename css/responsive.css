@@ -40,43 +40,7 @@
 		color: #3967B1;
 	}
 
-
-
 	/*** Portfolio Work ***/
-	/*.thumbnail_container {
-		margin: 15px 35px;
-		height: 200px;
-		width: 200px;
-	}
-
-	div.thumbnail {
-		height: 200px;
-		width: 200px;
-	}
-
-	div.project_skill {
-		font-size: 1.0em;
-	}
-
-	div.project_skill:nth-child(1){
-		top: 20px;
-	}
-
-	div.project_skill:nth-child(2){
-		top: 56px;
-	}
-
-	div.project_skill:nth-child(3){
-		top: 88px;
-	}
-
-	div.project_skill:nth-child(4){
-		top: 120px;
-	}
-
-	div.project_skill:nth-child(5){
-		top: 152px;
-	}*/
 
     /*** About Me ***/
 	.main_image_div {
@@ -87,6 +51,7 @@
 	.real_me p {
 	    font-size: 1.8rem;
     }
+    
 	/*** Skills ***/
 	.border_skill {
 		/*width: 125px;
@@ -123,40 +88,6 @@
 	}
 
 	/*** Portfolio Work ***/
-	/*.thumbnail_container {
-		height: 250px;
-		width: 250px;
-	}
-
-	div.thumbnail {
-		width: 250px;
-		height: 250px;
-	}
-
-	div.project_skill {
-		font-size: 1.4em;
-	}
-
-	div.project_skill:nth-child(1){
-		top: 30px;
-	}
-
-	div.project_skill:nth-child(2){
-		top: 69px;
-	}
-
-	div.project_skill:nth-child(3){
-		top: 108px;
-	}
-
-	div.project_skill:nth-child(4){
-		top: 147px;
-	}
-
-	div.project_skill:nth-child(5){
-		top: 186px;
-	}
-*/
 
     /*** About Me ***/
 	.main_image_div {
@@ -244,7 +175,7 @@
 	}*/
 
 	p.intro {
-		padding: 0 10%;
+		/*padding: 0 10%;*/
 	}
 
 	.border_skill {
@@ -301,9 +232,9 @@
 	}
 
 	/*** About Me ***/
-	p.intro {
+	/*p.intro {
 		padding: 0 15%;
-	}
+	}*/
 
 	.border_skill {
 		width: 200px;
@@ -346,39 +277,7 @@
 }
 
 	/*** Portfolio Work ***/
-	/*.thumbnail_container {
-		height: 275px;
-		width: 275px;
-	}
-
-	div.thumbnail {
-		width: 275px;
-		height: 275px;
-	}
-
-	div.project_skill {
-		font-size: 1.4em;
-	}
-
-	div.project_skill:nth-child(1){
-		top: 30px;
-	}
-
-	div.project_skill:nth-child(2){
-		top: 76px;
-	}
-
-	div.project_skill:nth-child(3){
-		top: 122px;
-	}
-
-	div.project_skill:nth-child(4){
-		top: 168px;
-	}
-
-	div.project_skill:nth-child(5){
-		top: 214px;
-	}*/
+	
 }
 
 @media screen and (min-width: 1330px) {
@@ -388,9 +287,9 @@
 	}
 
 	/*** About Me ***/
-	p.intro {
+	/*p.intro {
 		padding: 0 18%;
-	}
+	}*/
 
 	/*** Skills ***/
 	.border_skill {
@@ -433,37 +332,5 @@
 }
 
 	/*** Portfolio Work ***/
-	/*.thumbnail_container {
-		height: 300px;
-		width: 300px;
-	}
-
-	div.thumbnail {
-		width: 300px;
-		height: 300px;
-	}
-
-	div.project_skill {
-		font-size: 1.5em;
-	}
-
-	div.project_skill:nth-child(1){
-		top: 30px;
-	}
-
-	div.project_skill:nth-child(2){
-		top: 81px;
-	}
-
-	div.project_skill:nth-child(3){
-		top: 132px;
-	}
-
-	div.project_skill:nth-child(4){
-		top: 183px;
-	}
-
-	div.project_skill:nth-child(5){
-		top: 234px;
-	}*/
+	
 }

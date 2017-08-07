@@ -252,6 +252,14 @@ img.logo {
 	padding-left: 0;
 }
 
+.intro {
+	max-width: 600px;
+	padding: 0 3%;
+	display: inline-block;
+	border-bottom: 1px solid;
+	padding-bottom: 10px;
+}
+
 /************************* Blog section *************************/
 
 /************************ Skills section ************************/
@@ -429,86 +437,6 @@ img.logo {
 	font-weight: 400;
 	text-align: center;
 }
-
-/*@keyframes blackout_content {
-	from { background-color: inherit;
-		   color: inherit; }
-	to { background-color: #000;
-		 color: #000; }
-}*/
-
-/* The animation code */
-/*@keyframes rolling_html_circle {
-    to {
-    	transform: translateX(200px);
-    	-webkit-transform: translateX(200px);
-    }
-}
-
-@keyframes rolling_html_banner {
-    from {
-    	margin-left: 100%;
-    	margin-right: 0%;
-        margin: 0 auto;
-        display: inline-block;
-        text-align: center;
-    	transform: rotate(0deg);
-    }
-    to {
-    	margin-right: 100%;
-    	margin-left: 0%;
-        margin: 0 auto;
-        display: inline-block;
-        text-align: center;
-    	transform: rotate(360deg);
-    }
-}
-
-.biggest_skills_container {
-}
-
-.biggest_skills_container h2 {
-}
-
-.skill_spacing {
-	text-align: center;
-}
-
-.skill_container {
-	position: relative;
-	height: 200px;
-	width: 200px;
-	border-radius: 200px;
-	border: 2px solid black;
-	margin-top: 50px;
-}
-
-.html_container {
-	position: absolute;
-	height: 200px;
-	width: 200px;
-	left: -200px;
-	background-color: #2C8BDE;
-	border-radius: 200px;
-    animation-name: rolling_html_circle;
-    animation-duration: 5s;
-    animation-fill-mode: forwards;
-    margin: 0 auto;
-}
-
-.html_banner:before {
-    content: "Congratulations";
-    font-size: 2.5rem;
-}
-
-.html_banner {
-	margin: 0 auto;
-    display: block;
-    text-align: center;
-	line-height: 200px;
-	animation-name: rolling_html_banner;
-	animation-duration: 5s;
-}*/
 
 /************************* Portfolio section *************************/
 
