@@ -90,8 +90,10 @@ $(document).ready(function () {
 	});
 
 	/* Change the text to reflect that the user submitted a message */
-	$('#contact_form').submit(function () {
+	$('#contact_form').submit(function (event) {
 		$('#contact_greeting').replaceWith('<p id="contact_thanks">Thanks for your request. Make another one!</p>');
+	    event.preventDefault();
+		$("#contact_form")[0].submit();
 		$(this)[0].reset();
 		$(this)[1].reset();
 		$(this)[2].reset();
