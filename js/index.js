@@ -3,6 +3,7 @@ $(document).ready(function () {
 	// Initially check browser width for sizing of contact links
 	checkBrowserWidth();
 	contactSlideEffect();
+
 	/* On hover - remove the hidden class and blurred_image to show the 'The Real Me' 
 	   text and clear profile picture. */
 	$('.main_image_div').hover(function () {
@@ -216,7 +217,7 @@ $(document).ready(function () {
 		if(!youShallNotRun) {
 			// var original = $(this).find('.skill_banner').text();
 			$(this).css('cursor', 'pointer');
-			// $(this).css({backgroundColor: "red"});
+			$(this).addClass('hover_skill');
 			// console.log("this is the original:" + original);
 			// $(this).data('original', original);
 			// setTimeout(function() {
@@ -230,7 +231,8 @@ $(document).ready(function () {
 	}, function(event) {
 		if(!youShallNotRun) {	
 			// $(this).find('.skill_banner').text($(this).data('original'));
-			$(this).css({backgroundColor: "inherit"});
+			// $(this).css({backgroundColor: "inherit"});
+			$(this).removeClass('hover_skill');
 		}
 	});
 var animation_target;
@@ -239,6 +241,7 @@ var animation_target;
 		// for (x in skillList) {
 		// 	if ("#" + skillsList.x === $(this).find('.skill_banner').('#html')
 		// }
+		$(this).removeClass('hover_skill');
 		if ($(this).find('.skill_banner').is('#' + skillsList.first) && (!youShallNotRun)) {
 			
 			console.log("html");
@@ -461,7 +464,7 @@ var move;
 				      '<div class="popover-footer"><button type="button" id="confirm_wordpress" class="btn btn-primary wordpress_button">' +
 				      '<i class="fa fa-check"></i></button>&nbsp;'+
 				      '<button type="button" id="deny_wordpress" class="btn btn-danger wordpress_button">' +
-				      '<i class="fa fa-fw fa-times"></i></button>&nbsp;'+
+				      '<i class="fa fa-times"></i></button>&nbsp;'+
 				      '</div>',
 			});
 			$(animation_target).popover("show");

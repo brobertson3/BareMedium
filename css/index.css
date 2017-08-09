@@ -68,18 +68,18 @@ i.fa-wifi {
 }
 
 i.fa-i-cursor {
-	top: 150px;
+	top: 110px;
 	left: 87%;
 }
 
 i.fa-code {
 	top: 540px;
-	left: 14%;
+	left: 9%;
 }
 
 i.fa-headphones {
-	top: 275px;
-	left: 37%;
+	top: 395px;
+	left: 32%;
 }
 
 i.fa-laptop {
@@ -90,6 +90,28 @@ i.fa-laptop {
 i.fa-sitemap {
 	top: 593px;
 	left: 53%;
+}
+
+i.fa-gamepad {
+	top: 150px;
+	left: 47%;
+}
+
+i.fa.floating {
+	animation-name: spin;
+	animation-iteration-count: infinite;
+	animation-duration: 4s;
+	animation-timing-function: linear;
+}
+
+@keyframes spin{
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}	
 }
 
 /********************** Navigation section **********************/
@@ -178,7 +200,7 @@ img.logo {
 .main_image_div {
 	display: inline-block;
 	position: relative;
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 	height: 125px;
 	width: 125px;
 	border-radius: 50%;
@@ -283,6 +305,26 @@ img.logo {
 	/*position: relative;*/
 }
 
+.skill_shell:nth-child(2n) .border_skill {
+	border-color: rgb(196, 0, 16);
+}
+
+.hover_skill:hover {
+	color: #FFF;
+}
+
+.skill_shell:nth-child(odd) .hover_skill:hover {
+	background-color: #3967B1;
+}
+
+.skill_shell:nth-child(2n) .hover_skill:hover {
+	background-color: rgb(196, 0, 16);
+}
+
+.hover_skill:hover {
+	transition: background-color 1s;
+}
+
 .spin {
 	animation-name: blink_life;
 	animation-timing-function: linear;
@@ -304,10 +346,6 @@ img.logo {
 	64% { opacity: 0; }
 	80% { opacity: 1; }
 	100% { opacity: 0; }
-}
-
-.skill_shell:nth-child(2n) .border_skill {
-	border-color: rgb(196, 0, 16);
 }
 
 .skill_banner {
@@ -390,6 +428,30 @@ img.logo {
 		transform: rotate(360deg);
 	}
 }
+
+/*.hover_skill {
+	animation-name: fill_circle_red;
+	animation-timing-function: linear;
+	animation-duration: 1.5s;
+	animation-direction: forwards;
+}
+
+.hover_skill:nth-child(2n) {
+	animation-name: fill_circle_blue;
+	animation-timing-function: linear;
+	animation-duration: 1.5s;
+	animation-direction: forwards;
+}
+
+@keyframes fill_circle_red {
+	0% { background-color: initial; }
+	100% { background-color: rgb(196, 0, 16); }
+}
+
+@keyframes fill_circle_blue {
+	0% { background-color: initial; }
+	100% { background-color: #3967B1; }
+}*/
 
 @keyframes fade_in_darkness {
 	0% { opacity: 0; }
