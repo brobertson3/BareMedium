@@ -4,6 +4,18 @@ $(document).ready(function () {
 	checkBrowserWidth();
 	contactSlideEffect();
 
+	// Hide the collapse menu everytime the document is clicked
+	$(document).click(function() {
+		$('#nav_main').hide();
+	});
+
+	/* Stop the click event from bubbling up when the collapse button is clicked.
+	   Instead, we're going to toggle the collapse menu open and closed. */
+	$('button.navbar-toggle').click(function(event) {
+		event.stopPropagation();
+		$('#nav_main').toggle();
+	});
+
 	/* On hover - remove the hidden class and blurred_image to show the 'The Real Me' 
 	   text and clear profile picture. */
 	$('.main_image_div').hover(function () {
