@@ -4,6 +4,7 @@ body {
 	font-weight: 400;
 	text-align: center;
 	min-width: 300px;
+	color: #000;
 }
 
 body p, ol li {
@@ -119,6 +120,7 @@ i.fa.floating {
 	margin-bottom: 0;
 	font-size: 2rem;
 	text-align: left;
+	background-color: #000;
 }
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
@@ -133,9 +135,18 @@ i.fa.floating {
 	border-width: 0;
 }
 
+div.navbar-header {
+	/*background-color: #000;*/
+}
+
+a.navbar-brand {
+	display: none;
+}
+
 img.logo {
 	margin-top: 10px;
 	margin-right: 10px;
+	margin-left: 15px;
 }
 
 /************************* Home section *************************/
@@ -279,7 +290,12 @@ img.logo {
 	padding: 0 3%;
 	display: inline-block;
 	border-bottom: 1px solid;
-	padding-bottom: 10px;
+	padding-bottom: 20px;
+	margin-bottom: 0;
+}
+
+.inner_about_container p:nth-of-type(2) {
+	padding-top: 20px;
 }
 
 /************************* Blog section *************************/

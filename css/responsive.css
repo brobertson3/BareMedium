@@ -40,6 +40,11 @@
 		color: #3967B1;
 	}
 
+	/*** Header ***/
+	/*a.navbar-brand {
+		display: none;
+	}*/
+
 	/*** Portfolio Work ***/
 
     /*** About Me ***/
@@ -85,6 +90,14 @@
 	/*** Header ***/
 	.navbar-header {
 		float: left !important;
+	}
+
+	a.navbar-brand {
+		display: inline;
+	}
+
+	img.logo {
+		margin-left: 0;
 	}
 
 	/*** Portfolio Work ***/
