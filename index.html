@@ -160,6 +160,7 @@
             <div id="rethree_modal" class="modal fade" role="dialog">
                 <div class="modal-dialog">
 
+                    
                     <!-- Modal content-->
                     <div class="modal-content">
                         <div class="modal-header">
@@ -206,10 +207,56 @@
                 </div>
             </div>
 
+            <!-- MSS Modal -->
+            <div id="mss_modal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;    </button>
+                            <h4 class="modal-title">ReThree</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Technologies used: <span class="bold_tech">HTML, CSS, Sketch, Bootstrap</span></p> 
+                            <p>My colleague and I teamed up to complete this freelance project to refresh the web presence of The Maryland Society for Sight, an exceptional non-profit organization in Baltimore, MD.  This organization was founded in 1909 and successfully eradicated a leading cause of blindness.  Now, their mission is to prevent blindness and preserve sight for Marylanders through the numerous statewide programs they have established.  With such a wonderful purpose, there was no way that we could pass up the chance to volunteer our services.</p>
+
+                            <p>I was in charge of the initial contact with this organization, which led to a meeting to discuss the essential components needed for the landing page.  Audrey was a wonderful client to work with.  She was a wealth of knowledge and gave us all of the materials that we needed.  After I created a quick mockup using Sketch, we developed the landing page and sent the finished product to Audrey for review.  I was responsible for making the initial skeleton in HTML and changing some of the Bootstrap related HTML and CSS to make the page more responsive.  Once approved, we launched the new landing page.  We are currently in the process of completing the full version of the site, which will be done in WordPress.</p>
+
+                            <p>Just for comparison, here is what the website looked like initially:</p>
+                            <img class="modal_image" src="img/MSS_before.png">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
             <h2>Portfolio</h2>
             <div class="inner_portfolio_container">
                 <div class="portfolio_thumbnails_container">
-                    <!-- TODO: add the read more description after each thumbnail -->
+                    <!-- This is the container for the MD Society for Sight project. -->
+                    <div class="project_container">
+                        <div class="thumbnail_container mss_image">
+                            <div class="project_skill hidden">CSS</div>
+                            <div class="project_skill hidden">HTML</div>
+                            <div class="project_skill hidden">Sketch</div>
+                            <div class="project_skill hidden">Bootstrap</div>
+                            <div class="thumbnail"></div>
+                        </div>
+
+                        <div id="project_title">
+                            <i class="fa fa-angle-double-right custom fa-2x hidden"></i>
+                            <h3 class="thumbnail_title mss"><a href="http://www.mdsocietyforsight.org/">MD Society for Sight</a></h3>
+                            <i class="fa fa-angle-double-left custom fa-2x hidden"></i>
+                        </div>
+
+                        <p class="brief_description">This is the new landing page for an amazing non-profit organization.  A partner and I are currently doing a refresh of their entire main webpage.  They're helping Maryland residents SEE results.</p>
+                    <!-- TODO change the color of this on hover. -->
+                        <p id="read_more mss_modal" data-toggle="modal" data-target="#mss_modal"><a class="read_more_hover">Read More</a></p>
+                    </div>
                     <!-- This is the container for the ReThree Project. -->
                     <div class="project_container">
                         <div class="thumbnail_container rethree_image">
@@ -221,7 +268,7 @@
                             <div class="thumbnail"></div>
                         </div>
 
-                        <div>
+                        <div id="project_title">
                             <i class="fa fa-angle-double-right custom fa-2x hidden"></i>
                             <h3 class="thumbnail_title rethree"><a href="http://brobertson3.github.io/">ReThree</a></h3>
                             <i class="fa fa-angle-double-left custom fa-2x hidden"></i>
@@ -242,7 +289,7 @@
                             <div class="project_skill hidden">Bootstrap</div>
                             <div class="thumbnail"></div>
                         </div>
-                        <div>
+                        <div id="project_title">
                             <i class="fa fa-angle-double-right custom fa-2x hidden"></i>
                             <h3 class="thumbnail_title baremedium">BareMedium</h3>
                             <i class="fa fa-angle-double-left custom fa-2x hidden"></i>
@@ -259,8 +306,8 @@
                             </div>
                         </div>
                         <h3 class="thumbnail_title">Chewzer</h3>
-                        <p class="brief_description">Chewzer is a collaborative project that I'm working on with the talented <a href="https://lindsayboylan.com/" target="_blank">Lindsay Boylan</a>.  This project suggests weekly meals based on your dietary restrictions and nutritional targets.</p>
-                        <p id="read_more"><a class="read_more_hover">Read More</a></p>
+                        <p class="brief_description">Chewzer is a collaborative project that I'm working on with the talented <a href="https://lindsayboylan.com/" target="_blank">Lindsay Boylan</a>.  This project recommends weekly meals based on your dietary restrictions and nutritional targets.</p>
+                        <!-- <p id="read_more"><a class="read_more_hover">Read More</a></p> -->
                     </div>
                 </div>
             </div>

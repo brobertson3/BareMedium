@@ -89,17 +89,22 @@ $(document).ready(function () {
 
 	/* On hover, show the pulsing arrows, else hide the arrows */
 	$('.thumbnail_container').hover(function(event) {
-		if ($(this).hasClass("rethree_image")) {
-			$('.thumbnail_title.rethree').siblings().removeClass("hidden");
-		} else if ($(this).hasClass("baremedium_image")) {
-			$('.thumbnail_title.baremedium').siblings().removeClass("hidden");
+		if (!$(this).attr('.coming_soon')) {
+			console.log("you made it hee");
+			$(this).siblings("#project_title").children("i").removeClass("hidden");
 		}
+		// if ($(this).hasClass("rethree_image")) {
+		// 	$('.thumbnail_title.rethree').siblings().removeClass("hidden");
+		// } else if ($(this).hasClass("baremedium_image")) {
+		// 	$('.thumbnail_title.baremedium').siblings().removeClass("hidden");
+		// }
 	}, function (event) {
-		if($(this).hasClass("rethree_image")) {
-			$('.thumbnail_title.rethree').siblings().addClass("hidden");
-		} else if ($(this).hasClass("baremedium_image")) {
-			$('.thumbnail_title.baremedium').siblings().addClass("hidden");
-		}
+		$(this).siblings("#project_title").children("i").addClass("hidden");
+		// if($(this).hasClass("rethree_image")) {
+		// 	$('.thumbnail_title.rethree').siblings().addClass("hidden");
+		// } else if ($(this).hasClass("baremedium_image")) {
+		// 	$('.thumbnail_title.baremedium').siblings().addClass("hidden");
+		// }
 	});
 
 	/* Change the text to reflect that the user submitted a message */
