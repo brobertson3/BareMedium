@@ -90,8 +90,7 @@ $(document).ready(function () {
 	/* On hover, show the pulsing arrows, else hide the arrows */
 	$('.thumbnail_container').hover(function(event) {
 		if (!$(this).attr('.coming_soon')) {
-			console.log("you made it hee");
-			$(this).siblings("#project_title").children("i").removeClass("hidden");
+			$(this).siblings(".project_title").children("i").removeClass("hidden");
 		}
 		// if ($(this).hasClass("rethree_image")) {
 		// 	$('.thumbnail_title.rethree').siblings().removeClass("hidden");
@@ -99,7 +98,7 @@ $(document).ready(function () {
 		// 	$('.thumbnail_title.baremedium').siblings().removeClass("hidden");
 		// }
 	}, function (event) {
-		$(this).siblings("#project_title").children("i").addClass("hidden");
+		$(this).siblings(".project_title").children("i").addClass("hidden");
 		// if($(this).hasClass("rethree_image")) {
 		// 	$('.thumbnail_title.rethree').siblings().addClass("hidden");
 		// } else if ($(this).hasClass("baremedium_image")) {

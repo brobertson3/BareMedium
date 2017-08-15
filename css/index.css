@@ -575,14 +575,14 @@ h4.modal-title {
 	color: #000;
 }
 
-#read_more {
+.read_more {
 	text-align: center;
 	color: #3967B1;
 }
 
 a.read_more_hover:hover {
 	text-decoration: none;
-	color: rgb(196, 0, 16);;
+	color: rgb(196, 0, 16);
 }
 
 .thumbnail_container {
