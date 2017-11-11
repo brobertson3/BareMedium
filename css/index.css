@@ -113,7 +113,7 @@ i.fa.floating {
 
 	100% {
 		transform: rotate(360deg);
-	}	
+	}
 }
 
 /********************** Navigation section **********************/
@@ -356,10 +356,10 @@ img.logo {
 }
 
 @keyframes blink_life {
-	4% { opacity: 0; } 
-	16% { opacity: 1; } 
-	32% { opacity: 0; } 
-	48% { opacity: 1; } 
+	4% { opacity: 0; }
+	16% { opacity: 1; }
+	32% { opacity: 0; }
+	48% { opacity: 1; }
 	64% { opacity: 0; }
 	80% { opacity: 1; }
 	100% { opacity: 0; }
@@ -431,13 +431,73 @@ img.logo {
 	/*z-index: 201;*/
 }
 
-@keyframes css_spin {									
+@keyframes css_spin {
 	0% {
 		transform: rotate(0deg);
-	} 
+	}
 
 	50% {
-		font-size: 3.7em;
+		font-size: 3.7rem;
+		font-weight: 800;
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes css_spin_768 {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	50% {
+		font-size: 4.0rem;
+		font-weight: 800;
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes css_spin_990 {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	50% {
+		font-size: 4.3rem;
+		font-weight: 800;
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes css_spin_1130 {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	50% {
+		font-size: 4.6rem;
+		font-weight: 800;
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes css_spin_1330 {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	50% {
+		font-size: 5.0rem;
 		font-weight: 800;
 	}
 
@@ -484,7 +544,7 @@ img.logo {
 	0% { font-size: inherit;
 		 color: inherit; }
 	37% { color: #fff; }
-	50% { font-size: 3.7em; 
+	50% { font-size: 3.7em;
 		  color: #fff; }*/
 	/*100% { font-size: 3.7em;
 		   color: #fff; }*/
@@ -527,7 +587,7 @@ h4.modal-title {
 	font-family: 'Permanent Marker', sans-serif;
 }
 
-/* Make sure that the modal isn't longer than the screen.  
+/* Make sure that the modal isn't longer than the screen.
    If so, then it becomes scrollable. */
 .modal-body {
     max-height: calc(100vh - 210px);
@@ -562,7 +622,7 @@ h4.modal-title {
 }
 
 .project_container p {
-	margin-top: 10px; 
+	margin-top: 10px;
 	width: 100%;
 }
 
@@ -609,11 +669,11 @@ a.read_more_hover:hover {
 
 /* TODO add this image */
 .baremedium_image {
-	background-image: url("../img/BareMedium_screen.png");	
+	background-image: url("../img/BareMedium_screen.png");
 }
 
 .mss_image {
-	background-image: url("../img/MSS_landing_page.png");		
+	background-image: url("../img/MSS_landing_page.png");
 }
 
 .dashed_border {

@@ -251,7 +251,9 @@ $(document).ready(function () {
 			$(this).removeClass('hover_skill');
 		}
 	});
+
 var animation_target;
+
 	$('.border_skill').click(function(event) {
 		// var x;
 		// for (x in skillList) {
@@ -260,7 +262,7 @@ var animation_target;
 		$(this).removeClass('hover_skill');
 		if ($(this).find('.skill_banner').is('#' + skillsList.first) && (!youShallNotRun)) {
 			
-			console.log("html");
+			// console.log("html");
 			youShallNotRun = true;
 
 			setTimeout(function() {
@@ -284,20 +286,21 @@ var animation_target;
 			}, 5000);
 
 		} else if ($(this).find('.skill_banner').is('#' + skillsList.second) && (!youShallNotRun)) {
-			console.log("css");
-
+			// console.log("css");
+			var context = $(this).find('.skill_banner');
 			if (!runOnce) {
 				$('#' + skillsList.second).text("CSS3");
 				youShallNotRun = true;
 				runOnce = true;
 				$(this).find('.skill_banner').addClass('css_trick');
+
 				setTimeout(function() {
-					$(this).find('.skill_banner').removeClass('css_trick');
+					context.removeClass('css_trick');
 					youShallNotRun = false;
 				}, 2000);
 			} else {
 				$('#css').popover({
-					content: "Sorry, I only have enough chakra do that trick once.",
+					content: "Sorry, I'm a little dizzy.",
 					placement: "bottom",
 				});
 				setTimeout(function() {
@@ -308,7 +311,6 @@ var animation_target;
 					$('#css').popover("destroy");
 				}, 2200);
 			}
-			
 
 		} else if ($(this).find('.skill_banner').is('#' + skillsList.third) && (!youShallNotRun)) {
 			
