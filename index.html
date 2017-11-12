@@ -234,8 +234,33 @@
                 </div>
             </div>
 
+            <!-- MSS Modal -->
+            <div id="hangman_modal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;    </button>
+                            <h4 class="modal-title">Hangman</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Technologies used: <span class="bold_tech">HTML5, CSS, JavaScript, Canvas</span></p> 
+                            <p>This is my adaptation of the classic game, Hangman.  For this project, I relied heavily on vanilla JavaScript for the logic.  This game starts out by asking Player 1 to enter in the word they would like their opponent to guess.  Once a valid response is entered, Player 2 gets chances to guess what the word is by entering one letter at a time.  If Player 2 guesses the wrong letter, then a body part of Hangman is drawn on the board.  This equates to 6 chances for Player 2 to guess the incorrect letter.  Player 2 also gets 1 chance to guess the entire word, but if it is incorrect then the game is over.  Likewise, once all guesses are used then the game is over.  Player 2 wins by either guessing the correct word or guessing letters until the correct word is revealed.</p>
+
+                            <p>This project taught me how to handle form validation.  This included displaying an error if non-alpha characters were entered or more than one character was entered for a guess (excluding guessing the entire word).  This project also taught me how to dynamically generate HTML elements based on user input.  Finally, I was able to learn how to use the HTML5 canvas element to draw the Hangman figure.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
             <h2>Portfolio</h2>
             <div class="inner_portfolio_container">
+                <h3>Websites</h3>
                 <div class="portfolio_thumbnails_container">
                     <!-- This is the container for the MD Society for Sight project. -->
                     <div class="project_container">
@@ -310,7 +335,30 @@
                         <!-- <p id="read_more"><a class="read_more_hover">Read More</a></p> -->
                     </div>
                 </div>
+                <h3>Mini Projects</h3>
+                <div class="portfolio_thumbnails_container">
+                    <div class="project_container">
+                        <div class="thumbnail_container hangman_image" title="Thumbnail of screenshot for Hangman Javascript Project.">
+                            <div class="project_skill hidden">JavaScript</div>
+                            <div class="project_skill hidden">HTML5</div>
+                            <div class="project_skill hidden">CSS</div>
+                            <div class="project_skill hidden">Canvas</div>
+                            <div class="thumbnail"></div>
+                        </div>
+
+                        <div class="project_title">
+                            <i class="fa fa-angle-double-right custom fa-2x hidden" title="Right pointing icon towards title."></i>
+                            <h3 class="thumbnail_title mss"><a href="http://www.mdsocietyforsight.org/">Hangman Game</a></h3>
+                            <i class="fa fa-angle-double-left custom fa-2x hidden" title="Left pointing icon towards title."></i>
+                        </div>
+
+                        <p class="brief_description">This is a mini project that I completed to replicate the classic game of Hangman.  This idea was incubated after attending a workshop sponsored by the <a href="https://learnteachcode.org/" target="_blank">Learn Teach Code</a> organization.</p>
+                    <!-- TODO change the color of this on hover. -->
+                        <p class="read_more" data-toggle="modal" data-target="#hangman_modal"><a class="read_more_hover">Read More</a></p>
+                    </div>
+                </div>
             </div>
+
         </div>
 
         <div class="container-fluid contact_me_container" id="contact_me">

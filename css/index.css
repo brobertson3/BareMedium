@@ -28,6 +28,10 @@ h2, h4 {
 	font-size: 3rem;
 }
 
+h2 {
+	margin-top: 1.2em;
+}
+
 .padding_top {
 	padding-top: 50px;
 }
@@ -195,7 +199,6 @@ img.logo {
 }
 
 .about_me_container h2:first-child {
-	margin-top: 20px;
 	margin-bottom: 0;
 	padding-right: 7rem;
 }
@@ -676,6 +679,10 @@ a.read_more_hover:hover {
 	background-image: url("../img/MSS_landing_page.png");
 }
 
+.hangman_image {
+	background-image: url("../img/hangman_screen.png");
+}
+
 .dashed_border {
 	border-style: dashed;
 }
@@ -739,6 +746,10 @@ div.thumbnail p{
 
 .coming_soon .thumbnail p {
 	font-size: 3rem;
+}
+
+.inner_portfolio_container h3 {
+	margin-top: 2em;
 }
 
 /* TODO need to change these colors to match the theme of the site*/
