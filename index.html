@@ -258,10 +258,54 @@
                 </div>
             </div>
 
+            <!-- MSS Modal -->
+            <div id="nsbe_modal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;    </button>
+                            <h4 class="modal-title">NSBE-BMAC</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Technologies used: <span class="bold_tech">WordPress, CSS</span></p> 
+                            <p>This project was completed for the National Society of Black Engineers, Baltimore Metropolitan Area Chapter.  This organization needed a website that is more modern with a backend that makes it easy to update content.  For this reason, I chose to use WordPress so that they could easily update content in the future.</p>
+                            <p>I started by creating a landing page which showed all of their updated and pertinent information.  This was developed using Bootstrap and can be viewed <a href="http://www.nsbe-bmac.org" target="_blank">here</a>.  Next, I created a wireframe for what I wanted the site to look like.  After that, I searched for free WordPress templates and plugins that would help me to achieve the look of my wireframe.  Once all parts were identified, I began development.</p>
+                            <p>Since development was based on a WordPress template, I tried to use as many pre-existing features as I could.  For additional functionality that was not included, I used plugins that fit the design scheme.  Then, for any additional changes that had to be made, I customized the CSS of the template itself.  I am currently awaiting the final images to include on the site.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
             <h2>Portfolio</h2>
             <div class="inner_portfolio_container">
                 <h3>Websites</h3>
                 <div class="portfolio_thumbnails_container">
+
+                    <!-- This is the container for the NSBE Project. -->
+                    <div class="project_container">
+                        <div class="thumbnail_container nsbe_image" title="Thumbnail of screenshot for NSBE project.">
+                            <div class="project_skill hidden">WordPress</div>
+                            <div class="project_skill hidden">CSS</div>
+                            <div class="thumbnail"></div>
+                        </div>
+
+                        <div class="project_title">
+                            <i class="fa fa-angle-double-right custom fa-2x hidden" title="Right pointing icon towards title."></i>
+                            <h3 class="thumbnail_title nsbe"><a href="http://nsbe-bmac.org/wordpress/">NSBE-BMAC</a></h3>
+                            <i class="fa fa-angle-double-left custom fa-2x hidden" title="Left pointing icon towards title."></i>
+                        </div>
+
+                        <p class="brief_description">This website is being completed for the National Society of Black Engineers.  Some content and images still need to be added for it to be complete.  This site was completed in WordPress. </p>
+                        <!-- TODO change the color of this on hover. -->
+                        <p class="read_more" data-toggle="modal" data-target="#nsbe_modal"><a class="read_more_hover">Read More</a></p>
+                    </div>
+
                     <!-- This is the container for the MD Society for Sight project. -->
                     <div class="project_container">
                         <div class="thumbnail_container mss_image" title="Thumbnail of screenshot for Maryland Society for Sight website.">
