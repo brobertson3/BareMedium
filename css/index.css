@@ -1,8 +1,13 @@
 body {
-	margin-top: 100px;
-}
+  margin-top: 100px; }
 
 h2.title {
-	text-transform: uppercase;
-	text-align: center;
-}
+  text-transform: uppercase;
+  text-align: center; }
+
+#black-glasses, #red-glasses {
+  width: 150px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-100%);
+  margin-top: 30px; }
