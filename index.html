@@ -17,11 +17,6 @@
         <!-- Script links -->
         <script src='http://code.jquery.com/jquery-latest.min.js'></script>
         <script type="text/javascript" src="bootstrap/bootstrap.min.js"></script>
-        <!-- <script type="text/javascript">
-            $(function () { 
-                $("#rethree_modal").modal({show:false});
-            });  
-        </script> -->
     </head>
 
     <body>
@@ -234,7 +229,7 @@
                 </div>
             </div>
 
-            <!-- MSS Modal -->
+            <!-- Hangman Modal -->
             <div id="hangman_modal" class="modal fade" role="dialog">
                 <div class="modal-dialog">
 
@@ -258,7 +253,7 @@
                 </div>
             </div>
 
-            <!-- MSS Modal -->
+            <!-- NSBE Modal -->
             <div id="nsbe_modal" class="modal fade" role="dialog">
                 <div class="modal-dialog">
 
@@ -282,8 +277,78 @@
                 </div>
             </div>
 
+            <!-- Quizme Modal -->
+            <div id="quizme_modal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;    </button>
+                            <h4 class="modal-title">Quiz[ME]</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Technologies used: <span class="bold_tech">HTML5, CSS3, JavaScript, jQuery, ES5/ES6, SASS, Gulp, Node.js, Bootstrap, Adobe Illustrator</span></p> 
+                            <p>This project is my take at a classic trivia game. Instead of using questions of random facts, all of the questions pertain to me. Though it sounds narcissistic, the questions are only Brent-centric so that you can learn more about me and what I'm looking for in my next role. The game also provides links at the end to my social media for further information.</p>
+
+                            <p>This project was heavily centered around JavaScript. I made some use of ES6 arrow functions. Event listeners were used heavily in this project, as the click events from buttons drove the interactivity. Transition animations were also used in CSS3 to control the hover effects of the buttons. CSS3 animations created the pulsing effect of the score at the end of the game. I created the illustrated guy using Adobe Illustrator.</p>
+
+                            <p>I used Gulp during development in order to automate the process of refreshing the browser with new changes everytime a file was saved.  I also used SCSS in order to handle the preprocessing of my CSS. Gulp again took over to automate the process of compiling the SCSS to CSS on every save. Node.js was used to run Gulp on a local server for development.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <h2>Portfolio</h2>
             <div class="inner_portfolio_container">
+                <h3>JavaScript Projects</h3>
+                <div class="portfolio_thumbnails_container">
+                    <!-- QuizMe -->
+                    <div class="project_container">
+                        <div class="thumbnail_container quizme_image" title="Thumbnail of screenshot for Quiz[ME] Javascript Project.">
+                            <div class="project_skill hidden">JavaScript</div>
+                            <div class="project_skill hidden">HTML5</div>
+                            <div class="project_skill hidden">SASS</div>
+                            <div class="project_skill hidden">Gulp</div>
+                            <div class="project_skill hidden">Illustrator</div>
+                            <div class="thumbnail"></div>
+                        </div>
+
+                        <div class="project_title">
+                            <i class="fa fa-angle-double-right custom fa-2x hidden" title="Right pointing icon towards title."></i>
+                            <h3 class="thumbnail_title mss"><a href="http://baremedium.co/quizme/">QuizMe Trivia Game</a></h3>
+                            <i class="fa fa-angle-double-left custom fa-2x hidden" title="Left pointing icon towards title."></i>
+                        </div>
+
+                        <p class="brief_description">This is a trivia game that I developed in JavaScript. The user answers questions (which all happen to be facts about me) until they reach the end of the quiz. Don't be shy, give it a try!</p>
+                        <!-- TODO change the color of this on hover. -->
+                        <p class="read_more" data-toggle="modal" data-target="#quizme_modal"><a class="read_more_hover">Read More</a></p>
+                    </div>
+                    <!-- Hangman -->
+                    <div class="project_container">
+                        <div class="thumbnail_container hangman_image" title="Thumbnail of screenshot for Hangman Javascript Project.">
+                            <div class="project_skill hidden">JavaScript</div>
+                            <div class="project_skill hidden">HTML5</div>
+                            <div class="project_skill hidden">CSS</div>
+                            <div class="project_skill hidden">Canvas</div>
+                            <div class="thumbnail"></div>
+                        </div>
+
+                        <div class="project_title">
+                            <i class="fa fa-angle-double-right custom fa-2x hidden" title="Right pointing icon towards title."></i>
+                            <h3 class="thumbnail_title mss"><a href="http://brobertson3.github.io/hangman/index.html">Hangman Game</a></h3>
+                            <i class="fa fa-angle-double-left custom fa-2x hidden" title="Left pointing icon towards title."></i>
+                        </div>
+
+                        <p class="brief_description">This is a mini project that I completed to replicate the classic game of Hangman.  This idea was incubated after attending a workshop sponsored by the <a href="https://learnteachcode.org/" target="_blank">Learn Teach Code</a> organization.</p>
+                    <!-- TODO change the color of this on hover. -->
+                        <p class="read_more" data-toggle="modal" data-target="#hangman_modal"><a class="read_more_hover">Read More</a></p>
+                    </div>
+                </div>
+
                 <h3>Websites</h3>
                 <div class="portfolio_thumbnails_container">
 
@@ -377,28 +442,6 @@
                         <h3 class="thumbnail_title">Chewzer</h3>
                         <p class="brief_description">Chewzer is a collaborative project that I'm working on with the talented <a href="https://lindsayboylan.com/" target="_blank">Lindsay Boylan</a>.  This project recommends weekly meals based on your dietary restrictions and nutritional targets.</p>
                         <!-- <p id="read_more"><a class="read_more_hover">Read More</a></p> -->
-                    </div>
-                </div>
-                <h3>Mini Projects</h3>
-                <div class="portfolio_thumbnails_container">
-                    <div class="project_container">
-                        <div class="thumbnail_container hangman_image" title="Thumbnail of screenshot for Hangman Javascript Project.">
-                            <div class="project_skill hidden">JavaScript</div>
-                            <div class="project_skill hidden">HTML5</div>
-                            <div class="project_skill hidden">CSS</div>
-                            <div class="project_skill hidden">Canvas</div>
-                            <div class="thumbnail"></div>
-                        </div>
-
-                        <div class="project_title">
-                            <i class="fa fa-angle-double-right custom fa-2x hidden" title="Right pointing icon towards title."></i>
-                            <h3 class="thumbnail_title mss"><a href="http://brobertson3.github.io/hangman/index.html">Hangman Game</a></h3>
-                            <i class="fa fa-angle-double-left custom fa-2x hidden" title="Left pointing icon towards title."></i>
-                        </div>
-
-                        <p class="brief_description">This is a mini project that I completed to replicate the classic game of Hangman.  This idea was incubated after attending a workshop sponsored by the <a href="https://learnteachcode.org/" target="_blank">Learn Teach Code</a> organization.</p>
-                    <!-- TODO change the color of this on hover. -->
-                        <p class="read_more" data-toggle="modal" data-target="#hangman_modal"><a class="read_more_hover">Read More</a></p>
                     </div>
                 </div>
             </div>

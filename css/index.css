@@ -688,7 +688,11 @@ a.read_more_hover:hover {
 }
 
 .nsbe_image {
-	background-image: url("../img/NSBE_screen.png")
+	background-image: url("../img/NSBE_screen.png");
+}
+
+.quizme_image {
+	background-image: url("../img/ScreenshotQuizMe.png");
 }
 
 .dashed_border {
